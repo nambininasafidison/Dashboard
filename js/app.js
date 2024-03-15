@@ -33,3 +33,39 @@ new Chart(chartTrafficContent, {
       }]
     }
 });
+
+//chart-sitePop
+
+const chartSitePop = document.getElementById('chart-sitePop');
+
+new Chart(chartSitePop ,{
+  type: 'bar',
+  data: {
+    datasets: [{
+      data: [20, 10 , 30],
+    }],
+    labels: ['site1', 'site2' , 'site3']
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    borderRadius:10
+  }
+})
+
+//chart-proxyCharge
+
+const chartProxyCharge = document.getElementById('chart-proxyCharge');
+
+new Chart(chartProxyCharge , {
+  type: 'pie',
+  data: {
+    datasets: [{
+      data: [65 , 35 ],
+    }],
+    labels: ['utilisé', 'libre']
+  }
+})

@@ -13,69 +13,15 @@ body{
     align-items: center;
 }
 
-body header{
+header{
     width: 90%;
     height: 10vh;
     background-color: antiquewhite;
 }
 
-body .container-charts{
-    width: 90%;
+.container{
+    width: 100%;
     height: 90vh;
-    background-color: aliceblue;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-body .container-charts .chart-top{
-    width: 100%;
-    height: 45vh;
-    background-color: aqua;
-    display: flex;
-}
-
-body .container-charts .chart-top .container-chartTraffic{
-    width: 60%;
-    height: 100%;
-    background-color: black;
-}
-
-
-body .container-charts .chart-top .container-traffic-content{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-body .container-charts .chart-bottom{
-    width: 100%;
-    height: 45vh;
-    background-color: blue;    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-body .container-charts .chart-bottom .container-proxy-state{
-    width: 30%;
-    height: 100%;
-    margin: 20px;
-    background-color: black;
-}
-
-body .container-charts .chart-bottom .container-sitePop{
-    width: 40%;
-    height: 100%;
-    margin: 20px;
-    background-color: blueviolet;
-}
-
-body .container-charts .chart-bottom .container-proxy-charge{
-    width: 30%;
-    height: 100%;
-    margin: 20px;
-    background-color: azure;
 }
 
