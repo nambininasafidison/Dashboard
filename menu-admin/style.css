@@ -8,6 +8,7 @@ body{
     width: 100%;
     height: 100vh;
     background-color: #190306;
+    font-family: sans-serif;
 }
 
 header{
@@ -104,10 +105,21 @@ header .container-bell .bell{
     height: 30px;
     border-radius: 100%;
     background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px #1E1E1E;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+    position: relative;
+}
+header .container-bell .bell span{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: .3vw;
+    color: #FFFFFF;
+    border-radius: 100%;
+    background-color: red;
 }
 
 .container-notification{
@@ -117,11 +129,64 @@ header .container-bell .bell{
     width: 350px;
     border-radius: 10px;
     height: 96%;
-    background-color: #FFFFFF;
+    background-color: #E7DFDF;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    font-weight: 700;
+
 }
 
+.container-notification .notif-title{
+    position: relative;
+    top: 15px;
+    left: 20px;
+    width: 250px;
+    border-radius: 20px;
+    height: 30px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-notification .all-notif{
+    position: relative;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: #E7DFDF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+.container-notification .all-notif .notif{
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container-notification .all-notif .notif span{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.container-notification .all-notif .notif .notif-deco{
+    width: 10px;
+    height: 100%;
+    background-color: red;
+}
+.container-notification .all-notif .notif .notif-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
 .menu-admin{
     width: 100%;
     height: 70vh;
@@ -224,24 +289,6 @@ header .container-bell .bell{
 
 
 @media screen and (max-width:768px) {
-    header{
-        width: 100%;
-        height: 10vh;
-        display: grid;
-        grid-template-columns: 90vw 10vw;
-        z-index: 1;
-    }
-    header .container-bell .bell{
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        margin-right: 10px;
-        background-color: #FFFFFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease-in-out;
-    }
     .menu-admin .option-admin-1 .container-option-1{
         flex-direction: column;
     }   
