@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #190306;
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 92vw 8vw;
+    z-index: 1;
+}
+header .container-menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+}
+header .container-menu hr{
+    width: 97%;
+    margin-left: 2vw;
+}
+header .container-menu .menu-bar{
+    width: 97%;
+    height: 6vh;
+    margin-left: 2vw;
+    position: relative;
+}
+header .container-menu .menu-bar .menu{
+    width: 150px;   
+    height: 100%;
+    position: absolute;
+    left: .1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header .container-menu .menu-bar .menu .menu-sand{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+header .container-menu .menu-bar .menu .menu-sand div{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header .container-menu .menu-bar .menu .menu-sand div span{
+    width: 90%;
+    height: 2px;
+    background-color: black;
+}
+
+
+header .container-menu .menu-bar .container-user-info{
+    width: 40vw;
+    height: 100%;
+    position: absolute;
+    right: .1vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .container-menu .menu-bar .container-user-info .user-info-name{
+    width: 20vw;
+    height: 90%;
+    border: 1px solid #FFFFFF;
+    margin-right: 1.5vw;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .container-menu .menu-bar .container-user-info .user-info-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    margin-right: 1vw;
+}
+header .container-bell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .container-bell .bell{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1vh;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-admin{
+    width: 100%;
+    height: 70vh;
+}
+
+.menu-admin .option-admin{
+    position: absolute;
+    width: 100%;
+    height: 70vh;       
+}
+
+.menu-admin .option-admin-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-admin .option-admin-1 .container-option-1{
+    width: 90vw;
+    height: 70vh;
+    display: none;
+}
+
+.menu-admin .option-admin-1 .container-option-1 div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-admin .option-admin-1 .container-option-1 div .card-option{
+    width: 25vw;
+    height: 40vh;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+}
+
+.menu-admin .option-admin-1 .container-option-1 div .card-option span{
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+#img-proxy{
+    width: 50%;
+    position: absolute;
+    top: -28px;
+    right: 0;
+}
+#option-name-proxy{
+    height: 2vh;
+    position: absolute;
+    bottom: 8vh;
+    right: 20px;
+    font-size: 1.3rem;
+}
+#img-red-left{
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#img-acl{
+    width: 50%;
+    position: absolute;
+    top: -28px;
+    right: 0;  
+    z-index: 5;  
+}
+#option-name-acl{
+    height: 2vh;
+    position: absolute;
+    bottom: 10vh;
+    left: 20px;
+    font-size: 1.3rem;
+}
+#img-red-right{
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-admin .option-admin-2{
+    background-color: bisque;
+    display: none;
+}
+
+.menu-admin .option-admin-3{
+    background-color: blanchedalmond;
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .menu-admin .option-admin-1 .container-option-1{
+        flex-direction: column;
+    }   
+    .menu-admin .option-admin-1 .container-option-1 div{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-admin .option-admin-1 .container-option-1 div .card-option{
+        width: 40vw;
+        height: 25vh;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+    }
+}
+
+.container-progress-bar{
+    position: absolute;
+    top: 20%;
+    left: 3vw;
+    width: 30px;
+    height: 50vh;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-progress-bar .progress-bar{
+    width: 1px;
+    height: 90%;
+    background-color: #FFFFFF;
+}
+
+.container-navigate{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-navigate hr{
+    width: 30%;
+    background-color: #FFFFFF;
+}
+
+.container-navigate .btn{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: 10px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-navigate .btn:hover{
+    scale: 1.2;
+    transition: all .3s ease-in;
+    background-color: #FFFFFF;
+    color: #1E1E1E;
+}
