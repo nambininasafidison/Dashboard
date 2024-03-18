@@ -25,3 +25,14 @@ header{
     display: flex;
 }
 
+.container-chart-traffic{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.container-chart-traffic-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
