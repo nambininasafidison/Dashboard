@@ -9,41 +9,47 @@
   transition: all 0.3s ease-in-out;
   font-weight: bolder;
   z-index: 20;
+  padding: 2vh;
 }
 
 .container-notification .notif-title {
-  position: relative;
-  top: 15px;
-  left: 20px;
-  width: 250px;
-  border-radius: 20px;
-  height: 30px;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.2vw;
+  border: 0.1vw solid #190306;
+  padding: 0.5vh 2vw;
+  border-radius: 5vw;
+  width: 13vw;
+  color: #190306;
 }
 .container-notification .all-notif {
   position: relative;
   top: 30px;
   left: 0;
-  width: 100%;
-  height: 80vh;
-  background-color: #e7dfdf;
+  height: 78vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  padding: 1vh;
+}
+.container-notification .all-notif::-webkit-scrollbar {
+  width: 0.3vw;
+  margin: 0 1vw;
+}
+
+.container-notification .all-notif::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 1vw;
+}
+.container-notification .all-notif::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 1vw;
 }
 .container-notification .all-notif .notif {
-  width: 90%;
-  height: 50px;
-  margin-top: 20px;
-  background-color: #ffffff;
-  position: relative;
-  display: flex;
-  align-items: center;
+  height: 5vw;
+  margin: 1vh;
+  background-color: #fff;
 }
+
 .container-notification .all-notif .notif span {
   position: absolute;
   top: 0px;
