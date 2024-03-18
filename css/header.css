@@ -1,7 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: pop;
+}
+
+@font-face {
+  font-family: pop;
+  src: url(../assets/FontsFree-Net-Poppins-Medium.ttf);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #190306;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.main{
+  background-color: #0f0;
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100vw;
+}
+
 header {
   width: 100vw;
   height: 10vh;
   display: flex;
+  position: absolute;
+  top: 0;
 }
 header .container-menu {
   display: flex;
@@ -71,6 +100,7 @@ header .container-menu .menu-bar .container-user-info .user-info-img {
 }
 header .container-bell {
   margin: 2vh;
+  z-index: 30;
 }
 header .container-bell .bell {
   width: 2.5vw;

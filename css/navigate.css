@@ -1,0 +1,50 @@
+.main{
+  background-color: #0f0;
+  margin: 10vh 0 0 3vw;
+  height: 78vh;
+}
+
+.container-progress-bar {
+  position: absolute;
+  top: 25vh;
+  left: 1vw;
+  width: 30px;
+  height: 50vh;
+}
+
+.container-progress-bar .progress-bar {
+  width: 1px;
+  height: 90%;
+  background-color: #ffffff;
+}
+
+.container-navigate {
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-navigate hr {
+  width: 30vw;
+  background-color: #fff;
+}
+
+.container-navigate .btn {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: .5vh;
+  font-size: .8vw;
+}
+
+.container-navigate .btn:hover {
+  scale: 1.2;
+  transition: all 0.3s ease-in;
+  background-color: #ffffff;
+  color: #1e1e1e;
+}

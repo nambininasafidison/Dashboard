@@ -18,6 +18,12 @@ body {
   z-index: 0;
 }
 
+.main{
+    background-color: #0f0;
+    margin: 10vh 0 0 3vw;
+    height: 78vh;
+}
+
 .menu-admin {
   width: 100%;
   height: 70vh;
@@ -134,56 +140,4 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
   }
-}
-
-.container-progress-bar {
-  position: absolute;
-  top: 20%;
-  left: 3vw;
-  width: 30px;
-  height: 50vh;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-progress-bar .progress-bar {
-  width: 1px;
-  height: 90%;
-  background-color: #ffffff;
-}
-
-.container-navigate {
-  width: 100%;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.container-navigate hr {
-  width: 30%;
-  background-color: #ffffff;
-}
-
-.container-navigate .btn {
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  margin: 10px;
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-navigate .btn:hover {
-  scale: 1.2;
-  transition: all 0.3s ease-in;
-  background-color: #ffffff;
-  color: #1e1e1e;
 }

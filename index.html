@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/notification.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/navigate.css">
     <title>Dashboard</title>
   </head>
   <body>
@@ -30,60 +29,67 @@
         <hr />
       </section>
       <section class="container-bell">
-        <div class="bell">
+        <button class="bell">
           <span>10</span>
           <i class="fa fa-bell"></i>
+        </button>
+      </section>
+      <section class="background">
+        <div class="back back1"></div>
+        <div class="back back2"></div>
+        <div class="back back3"></div>
+      </section>
+      <section class="container-notification">
+        <div class="notif-title">
+          <p>NOTIFICATIONS</p>
         </div>
+        <section class="all-notif"></section>
       </section>
     </header>
-    <section class="container-notification">
-      <div class="notif-title">
-        <p>NOTIFICATIONS</p>
-      </div>
-      <section class="all-notif"></section>
-    </section>
-    <section class="menu-admin">
-      <section class="option-admin option-admin-1">
-        <div class="container-option-1">
-          <div>
-            <button class="card-option" id="option-proxy">
-              <span></span>
-              <img src="./assets/proxy.png" alt="" id="img-proxy" />
-              <img
-                src="./assets/triple-red-left.png"
-                alt=""
-                id="img-red-left"
-              />
-              <div id="option-name-proxy">
-                <p>
-                  Configurer <br />
-                  votre proxy
-                </p>
-              </div>
-            </button>
+    <section class="main">
+      <section class="menu-admin">
+        <section class="option-admin option-admin-1">
+          <div class="container-option-1">
+            <div>
+              <button class="card-option" id="option-proxy">
+                <span></span>
+                <img src="./assets/proxy.png" alt="" id="img-proxy" />
+                <img
+                  src="./assets/triple-red-left.png"
+                  alt=""
+                  id="img-red-left"
+                />
+                <div id="option-name-proxy">
+                  <p>
+                    Configurer <br />
+                    votre proxy
+                  </p>
+                </div>
+              </button>
+            </div>
+            <div>
+              <button class="card-option" id="option-acl">
+                <span></span>
+                <img src="./assets/ACL.png" alt="" id="img-acl" />
+                <img
+                  src="./assets/triple-red-right.png"
+                  alt=""
+                  id="img-red-right"
+                />
+                <div id="option-name-acl">
+                  <p>
+                    Gérer <br />
+                    votre ACL
+                  </p>
+                </div>
+              </button>
+            </div>
           </div>
-          <div>
-            <button class="card-option" id="option-acl">
-              <span></span>
-              <img src="./assets/ACL.png" alt="" id="img-acl" />
-              <img
-                src="./assets/triple-red-right.png"
-                alt=""
-                id="img-red-right"
-              />
-              <div id="option-name-acl">
-                <p>
-                  Gérer <br />
-                  votre ACL
-                </p>
-              </div>
-            </button>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="option-admin option-admin-2"></section>
-      <section class="option-admin option-admin-3"></section>
+        <section class="option-admin option-admin-2"></section>
+        <section class="option-admin option-admin-3"></section>
+      </section>
     </section>
 
     <section class="container-progress-bar">
@@ -92,14 +98,15 @@
 
     <section class="container-navigate">
       <button class="btn btn-previous">
-        <i class="fa-solid fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
       </button>
       <hr />
       <button class="btn btn-next">
-        <i class="fa-solid fa-arrow-down"></i>
+        <i class="fa fa-arrow-down"></i>
       </button>
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/notif.js"></script>
   </body>
 </html>
