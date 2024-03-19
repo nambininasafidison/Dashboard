@@ -10,7 +10,7 @@
   font-weight: bolder;
   z-index: 20;
   padding: 2vh;
-  display: none;
+  display: none; 
 }
 
 .container-notification .notif-title {
