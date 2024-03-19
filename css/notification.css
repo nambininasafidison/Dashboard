@@ -4,7 +4,7 @@
   right: 0;
   width: 30vw;
   height: 100vh;
-  border-radius: 10px;
+  border-radius: .5vw;
   background-color: #e7dfdf;
   transition: all 2s ease-in-out;
   font-weight: bolder;
@@ -23,7 +23,7 @@
 }
 .container-notification .all-notif {
   position: relative;
-  top: 30px;
+  top: 3vh;
   left: 0;
   max-height: 88vh;
   display: flex;
@@ -47,37 +47,38 @@
   border-radius: 1vw;
 }
 .container-notification .all-notif .notif {
-  /* height: 8vh; */
+  height: 8vh;
   margin: 0 0 1vh 0;
   width: 100%;
   background-color: #ffffff;
   position: relative;
   display: flex;
   align-items: center;
-  padding: .5vh 0;
+  padding: 0.5vh 0;
+  font-size: .8vw;
 }
 
-.container-notification .all-notif .notif:hover{
-  transform: scale(1.1);
-  transition: all .5s ease-in-out;
+.container-notification .all-notif .notif:hover {
+  transform: scaleY(1.08);
+  transition: all 0.3s ease-in-out;
 }
 
 .container-notification .all-notif .notif span {
   position: absolute;
-  top: 0px;
-  right: 5px;
+  top: 0;
+  right: .3vw;
 }
 .container-notification .all-notif .notif .date {
   position: absolute;
-  bottom: 3px;
-  right: 5px;
+  bottom: .2vh;
+  right: .1vw;
   color: #555;
-  font-size: 15px;
+  font-size: .6vw;
 }
 
 .container-notification .all-notif .notif .notif-deco {
-  width: 10px;
-height: inherit;
+  width: .3vw;
+  height: inherit;
   background-color: red;
 }
 .container-notification .all-notif .notif .notif-content {
@@ -88,3 +89,6 @@ height: inherit;
   align-items: center;
   justify-content: center;
 }
+/* 
+@media screen (max-width: ) {
+} */
