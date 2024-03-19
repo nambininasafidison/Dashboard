@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con {
+  position: relative;
+}
+
+.containerdir {
+  width: 60vw;
+  height: 66vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(
+    0 0,
+    15% 0,
+    20% 9%,
+    97% 9%,
+    100% 14%,
+    100% 100%,
+    0 100%
+  );
+}
+
+.dir {
+  width: 60vw;
+  height: 60vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+}
+

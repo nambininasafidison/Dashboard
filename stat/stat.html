@@ -4,31 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/stat.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
     <title>Statistic</title>
 </head>
 <body>
     <header>
-
-
-    </header>
-    <section class='container'>
-        <section class="container-btn-previous">
+        <section class="container-menu">
+          <div class="menu-bar">
+            <div class="menu">
+              <div class="menu-sand"></div>
+              <p>Admin</p>
+            </div>
+            <div class="container-user-info">
+              <div class="user-info-name">
+                <p>Mr Tahiry</p>
+              </div>
+              <div class="user-info-img"></div>
+            </div>
+          </div>
+          <hr />
+        </section>
+        <section class="container-bell">
+          <button class="bell">
+            <span>10</span>
+            <i class="fa fa-bell"></i>
+          </button>
+        </section>
+        <section class="background">
+          <div class="back back1"></div>
+          <div class="back back2"></div>
+          <div class="back back3"></div>
+        </section>
+        <section class="container-notification">
+          <div class="notif-title">
+            <p>NOTIFICATIONS</p>
+          </div>
+          <section class="all-notif"></section>
+        </section>
+      </header>
+    <section class='main'>
+        <!-- <section class="container-btn-previous">
             <div>
                 <a href=""></a>
                 <p>Précèdent</p>
             </div>
-        </section>
+        </section> -->
         <section class='container-charts'>
             <section class='chart-top'>
                 <div class='chart-top-left'>
                     <div class='container-chart-traffic'>
-                        <canvas id='chart-traffic' width="720" height="300"></canvas>
+                        <canvas id='chart-traffic' width="500" height="200"></canvas>
                     </div>
+                    <div class="containerdir"></div>
                 </div>
                 <div class='chart-top-right'>
                     <div class="container-chart-traffic-content">
-                        <canvas id='chart-traffic-content' width='100'></canvas>
+                        <canvas id='chart-traffic-content'></canvas>
                     </div>
+                    <div class="containerdir1"></div>
                 </div>
             </section>
             <section class='chart-bottom'>
@@ -48,12 +82,12 @@
                 </div>
             </section>
         </section>
-        <section class="container-btn-next">
+        <!-- <section class="container-btn-next">
             <div>
                 <a href=""></a>
                 <p>Suivant</p>
             </div>
-        </section> 
+        </section>  -->
     </section>
     
 
