@@ -5,14 +5,19 @@ new Chart(chartTraffic, {
     data: {
       labels: ['', '', '', '', '', ''],
       datasets: [{
-        label: 'Analyse du traffic réseau',
         data: [12, 19, 3, 5, 2, 3],
       }]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          stepSize:100
+        },
+        x: {
+          grid:{
+            display:false
+          }
         }
       },
       borderRadius:10

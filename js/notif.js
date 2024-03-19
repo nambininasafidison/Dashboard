@@ -8,15 +8,11 @@ bell.addEventListener('click' , () => {
         containerNotif.style.display = 'block';
         bell.style.backgroundColor = "#000";
         bell.style.color = "#fff";
-        fetch('../data/data_notif.txt')
+        fetch('../data/notif.json')
         .then((response) => {
             response.text()
             .then((data) => {
-                const tabNotif = data.split('\n').reverse();
-                for(let line of tabNotif){
-                    const notif = line.split('|');
-                    console.log(notif);
-                }
+                displayNotif(JSON.parse(data))
             })
         })
         .catch((err) => console.log("error fetching : " + err))
@@ -25,5 +21,64 @@ bell.addEventListener('click' , () => {
         containerNotif.style.display = 'none';
         bell.style.backgroundColor = "#fff";
         bell.style.color = "#1E1E1E";        
+        allNotif.innerHTML = "";
     }
 })
+
+function createNotif(text , notif){
+    const notifElement = document.createElement('div');
+    notifElement.classList.add('notif');
+    
+    const notifDeco = document.createElement('div');
+    notifDeco.classList.add('notif-deco');
+
+    const notifContent = document.createElement('div');
+    notifContent.classList.add('notif-content');
+    notifContent.textContent = text;
+
+    const notifDate = document.createElement('p');
+    notifDate.classList.add('date');
+    notifDate.textContent = notif.date;
+
+    const notifDelete = document.createElement('span');
+    notifDelete.style.cursor = "pointer";
+    notifDelete.textContent = "X";
+
+    notifDelete.addEventListener('click' , () => {
+        notifElement.remove();    
+    })
+
+    notifElement.append(notifDeco);
+    notifElement.append(notifContent);
+    notifElement.append(notifDate);
+    notifElement.append(notifDelete);
+    
+    allNotif.append(notifElement);
+}
+
+function displayNotifPc(notif){
+    if(notif.event === "nottaken" && notif.isLate === true){
+        const notifText = `L'étudiant ${notif.info.name} ${notif.info.firstName}  ${notif.info.level} n'a pas encore pris sa machine`;
+        createNotif(notifText , notif);
+    }
+}
+
+function displayNotifAccount(notif){
+    if(notif.event === "create"){
+        const notifText = `${notif.info.name} ${notif.info.firstName} ${notif.info.level} vous a demandé la permission de créer son compte en tant que ${notif.accountType}`;
+        createNotif(notifText , notif);
+    }
+}
+
+
+
+function displayNotif(tabNotif){
+    tabNotif = tabNotif.reverse();
+    for(let notif of tabNotif){ 
+        notif.type === "pc" ? displayNotifPc(notif) : displayNotifAccount(notif);
+    }
+}
+
+
+
+
