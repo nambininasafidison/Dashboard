@@ -58,9 +58,14 @@ function createNotif(text , notif){
 
 function displayNotifPc(notif){
     if(notif.event === "nottaken" && notif.isLate === true){
-        const notifText = `L'étudiant ${notif.info.name} ${notif.info.firstName}  ${notif.info.level} n'a pas encore pris sa machine`;
+        const notifText = `L'étudiant ${notif.info.name} ${notif.info.firstName}  ${notif.info.level} n'a pas encore pris sa machine (en retard)`;
         createNotif(notifText , notif);
     }
+    if(notif.event === "nottaken" && notif.isLate === false && notif.typeNotLate === "nottaken"){
+        const notifText = `L'étudiant ${notif.info.name} ${notif.info.firstName}  ${notif.info.level} n'a pas pris sa machine aujourd'hui`;
+        createNotif(notifText , notif);
+    }
+    
 }
 
 function displayNotifAccount(notif){
