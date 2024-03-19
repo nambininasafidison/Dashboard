@@ -25,12 +25,13 @@
   position: relative;
   top: 30px;
   left: 0;
-  height: 78vh;
+  height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
   padding: 1vh;
+  background-color: #190306;
 }
 .container-notification .all-notif::-webkit-scrollbar {
   width: 0.3vw;
