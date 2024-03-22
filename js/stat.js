@@ -1,10 +1,3 @@
-document.querySelector('.container-chart-traffic').addEventListener('click' , () =>{
-  console.log('click');
-  document.querySelector('.container-chart-traffic').style.display = "none";
-});
-
-
-
 const chartTraffic = document.getElementById('chart-traffic');
 
 new Chart(chartTraffic, {
@@ -49,8 +42,8 @@ new Chart(chartTrafficContent, {
 //chart-sitePop
 
 const chartSitePop = document.getElementById('chart-sitePop');
-let dataSitePop = [];
-let labelSitePop = [];
+let dataSitePop = ['chatgpt' , 'google' , 'youtube'];
+let labelSitePop = [100 , 200 , 300];
 let sitePopChart;
 
 function fetchData() {
@@ -60,7 +53,6 @@ function fetchData() {
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
-              let tabSitePop = JSON.parse(xhr.responseText);
               labelSitePop = [];
               dataSitePop = [];
               for(let sitePop of tabSitePop){
@@ -69,7 +61,7 @@ function fetchData() {
               }
               console.log(dataSitePop);
               console.log(labelSitePop);
-
+              
               if (!sitePopChart) {
                 sitePopChart = new Chart(chartSitePop, {
                   type: 'bar',
@@ -92,10 +84,6 @@ function fetchData() {
                     barPercentage: 0.7
                   }
                 });
-              } else {
-                sitePopChart.data.labels = labelSitePop;
-                sitePopChart.data.datasets[0].data = dataSitePop;
-                sitePopChart.update();
               }
           } else {
               console.error('Erreur lors de la récupération des données:', xhr.status);
@@ -106,7 +94,7 @@ function fetchData() {
 }
 
 fetchData();
-setInterval(fetchData, 1000);
+//setInterval(fetchData, 1000);
 
 
 //chart-proxyCharge
