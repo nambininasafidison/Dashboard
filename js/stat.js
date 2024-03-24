@@ -42,24 +42,60 @@ new Chart(chartTrafficContent, {
 //chart-sitePop
 
 const chartSitePop = document.getElementById('chart-sitePop');
+let dataSitePop = ['chatgpt' , 'google' , 'youtube'];
+let labelSitePop = [100 , 200 , 300];
+let sitePopChart;
 
-new Chart(chartSitePop ,{
-  type: 'bar',
-  data: {
-    datasets: [{
-      data: [20, 10 , 30],
-    }],
-    labels: ['site1', 'site2' , 'site3']
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
+function fetchData() {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', '../stat/backend_test/json.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+              labelSitePop = [];
+              dataSitePop = [];
+              for(let sitePop of tabSitePop){
+                  labelSitePop.push(sitePop.domain);
+                  dataSitePop.push(sitePop.number);
+              }
+              console.log(dataSitePop);
+              console.log(labelSitePop);
+              
+              if (!sitePopChart) {
+                sitePopChart = new Chart(chartSitePop, {
+                  type: 'bar',
+                  data: {
+                    datasets: [{
+                      label:'Nombre de visite du site',
+                      data: dataSitePop,
+                      backgroundColor:"#FFFFFF"
+                    }],
+                    labels: labelSitePop,
+                    
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    },
+                    borderRadius: 10,
+                    barPercentage: 0.7
+                  }
+                });
+              }
+          } else {
+              console.error('Erreur lors de la récupération des données:', xhr.status);
+          }
       }
-    },
-    borderRadius:10
-  }
-})
+  };
+  xhr.send();
+}
+
+fetchData();
+//setInterval(fetchData, 1000);
+
 
 //chart-proxyCharge
 
@@ -69,7 +105,8 @@ new Chart(chartProxyCharge , {
   type: 'pie',
   data: {
     datasets: [{
-      data: [65 , 35 ],
+      data: [65 , 35],
+      backgroundColor:['#E7BB2D' ,'#202124']
     }],
     labels: ['utilisé', 'libre']
   }

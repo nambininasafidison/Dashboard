@@ -6,6 +6,7 @@
 
 .con {
   position: relative;
+  overflow: hidden;
 }
 
 .containerdir {
@@ -24,6 +25,32 @@
   );
 }
 
+
+.square{
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.square1{
+  right: -4vw;
+  top:  30vh;
+}
+
+.square2{
+  right: -2vw;
+  top: 40vh;
+}
+
+.square3{
+right: 0;
+top: 50vh;
+}
+
 .dir {
   width: 60vw;
   height: 60vh;
@@ -32,5 +59,27 @@
   position: absolute;
   top: 5.9vh;
   z-index: 2;
+  overflow: hidden;
+  padding: 2vw;
 }
 
+.dir form{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 56vw;
+  height: 50vh;
+}
+
+.dir .left{
+  background-color: #f00;
+  width: 25vw;
+  height: 45vh;
+}
+
+.dir .right{
+  z-index: 4;
+  background-color: #0f0;
+  width: 25vw;
+  height: 45vh;
+}

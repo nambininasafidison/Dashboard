@@ -8,7 +8,7 @@
 .containerdir {
   width: 50vw;
   height: 46vh;
-  background-color: #fff;
+  background-color: #D9D9D9;
   border-radius: 1.5vw;
   clip-path: polygon(0 0, 15% 0, 20% 9%, 97% 9%, 100% 14%, 100% 100%, 0 100%);
 }
@@ -32,7 +32,7 @@
 .container-charts .chart-top .chart-top-left .container-chart-traffic {
   width: 54vw;
   height: 42vh;
-  background-color: #fff;
+  background-color: #D9D9D9;
   display: flex;
   justify-content: center;
   border-radius: 1.5vw;
@@ -88,17 +88,23 @@
   border-radius: 1vw;
 }
 .container-charts .chart-bottom .chart-bottom-center {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
 .container-charts .chart-bottom .chart-bottom-center .container-chart-sitePop {
   width: 29vw;
   height: 40vh;
   border-radius: 1vw;
-  background-color: #fff;
+  background-color: #202124;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
+
 .container-charts
   .chart-bottom
   .chart-bottom-center
@@ -127,4 +133,27 @@
   .container-chart-proxyCharge
   .chart-proxyCharge {
   display: block;
+}
+
+.new-container{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.438);
+  backdrop-filter: blur(2px);
+}
+.new-container .new-container-chart-traffic{
+  width: 54vw;
+  height: 42vh;
+  background-color: #8a0a0a;
+  display: flex;
+  justify-content: center;
+  border-radius: 1.5vw;
+  z-index: 60;
 }

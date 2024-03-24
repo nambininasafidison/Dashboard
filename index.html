@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/notification.css" />
     <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/navigate.css">
+    <link rel="stylesheet" href="css/navigate.css" />
+    <link rel="stylesheet" href="package/swiper-bundle.css" />
     <title>Dashboard</title>
   </head>
   <body>
@@ -44,70 +45,75 @@
           <p>NOTIFICATIONS</p>
         </div>
         <section class="all-notif">
-          
         </section>
       </section>
     </header>
-    <section class="main">
-      <section class="menu-admin">
-        <section class="option-admin option-admin-1">
-          <div class="container-option-1">
-            <div>
-              <button class="card-option" id="option-proxy">
-                <span></span>
-                <img src="./assets/proxy.png" alt="" id="img-proxy" />
-                <img
-                  src="./assets/triple-red-left.png"
-                  alt=""
-                  id="img-red-left"
-                />
-                <div id="option-name-proxy">
-                  <p>
-                    Configurer <br />
-                    votre proxy
-                  </p>
+    <section class="swiper">
+      <section class="swiper-wrapper">
+        <section class="swiper-slide">
+          <section class="menu-admin">
+            <section class="option-admin option-admin-1">
+              <div class="container-option-1">
+                <div>
+                  <button class="card-option" id="option-proxy">
+                    <span></span>
+                    <img src="./assets/proxy.png" alt="" id="img-proxy" />
+                    <img
+                      src="./assets/triple-red-left.png"
+                      alt=""
+                      id="img-red-left"
+                    />
+                    <div id="option-name-proxy">
+                      <p>
+                        Configurer <br />
+                        votre proxy
+                      </p>
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-            <div>
-              <button class="card-option" id="option-acl">
-                <span></span>
-                <img src="./assets/ACL.png" alt="" id="img-acl" />
-                <img
-                  src="./assets/triple-red-right.png"
-                  alt=""
-                  id="img-red-right"
-                />
-                <div id="option-name-acl">
-                  <p>
-                    Gérer <br />
-                    votre ACL
-                  </p>
+                <div>
+                  <button class="card-option" id="option-acl">
+                    <span></span>
+                    <img src="./assets/ACL.png" alt="" id="img-acl" />
+                    <img
+                      src="./assets/triple-red-right.png"
+                      alt=""
+                      id="img-red-right"
+                    />
+                    <div id="option-name-acl">
+                      <p>
+                        Gérer <br />
+                        votre ACL
+                      </p>
+                    </div>
+                  </button>
                 </div>
-              </button>
-            </div>
-          </div>
-        </section>
+              </div>
+            </section>
 
-        <section class="option-admin option-admin-2"></section>
-        <section class="option-admin option-admin-3"></section>
+            <section class="option-admin option-admin-2"></section>
+            <section class="option-admin option-admin-3"></section>
+          </section>
+        </section>
+        <section class="swiper-slide">
+          <h1>andarana</h1>
+        </section>
+      </section>
+      <section class="container-progress-bar">
+        <div class="progress-bar"></div>
+      </section>
+
+      <section class="container-navigate">
+        <button class="btn btn-previous">
+          <i class="fa fa-arrow-up"></i>
+        </button>
+        <hr />
+        <button class="btn btn-next">
+          <i class="fa fa-arrow-down"></i>
+        </button>
       </section>
     </section>
-
-    <section class="container-progress-bar">
-      <div class="progress-bar"></div>
-    </section>
-
-    <section class="container-navigate">
-      <button class="btn btn-previous">
-        <i class="fa fa-arrow-up"></i>
-      </button>
-      <hr />
-      <button class="btn btn-next">
-        <i class="fa fa-arrow-down"></i>
-      </button>
-    </section>
-
+    <script src="package/swiper-bundle.js"></script>
     <script src="js/index.js"></script>
     <script src="js/notif.js"></script>
   </body>

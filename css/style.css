@@ -18,11 +18,30 @@ body {
   z-index: 0;
 }
 
-.main{
-    background-color: #0f0;
-    margin: 10vh 0 0 3vw;
-    height: 78vh;
+.swiper-container {
+  margin: 10vh 0 0 3vw;
+  height: 90vh;
+  width: 94vw;
+  overflow: hidden;
 }
+
+.swiper-container-vertical .swiper-wrapper{
+  background-color: #0f0;
+  height: 78vh;
+  width: 94vw;
+}
+
+.swiper-container-vertical .swiper-wrapper .swiper-slide{
+  color: #190306;
+  height: 78vh;
+  width: 94vw;
+}
+
+/* 
+.swiper-container-vertical {
+  height: 300px; 
+}
+
 
 .menu-admin {
   width: 100%;
@@ -140,4 +159,4 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
   }
-}
+} */

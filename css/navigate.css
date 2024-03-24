@@ -1,23 +1,3 @@
-.main{
-  /* background-color: #0f0; */
-  margin: 10vh 0 0 3vw;
-  height: 78vh;
-}
-
-.container-progress-bar {
-  position: absolute;
-  top: 25vh;
-  left: 1vw;
-  width: 30px;
-  height: 50vh;
-}
-
-.container-progress-bar .progress-bar {
-  width: 1px;
-  height: 90%;
-  background-color: #ffffff;
-}
-
 .container-navigate {
   width: 100vw;
   height: 12vh;
@@ -47,4 +27,10 @@
   transition: all 0.3s ease-in;
   background-color: #ffffff;
   color: #1e1e1e;
+}
+
+.swiper-button-up,
+.swiper-button-down {
+  z-index: 10;
+  cursor: pointer;
 }

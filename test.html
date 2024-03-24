@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper Horizontal avec Vertical Imbriqué et Navigation</title>
+    <link rel="stylesheet" href="package/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/navigate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/notification.css" />
+  </head>
+  <body>
+    <header>
+      <section class="container-menu">
+        <div class="menu-bar">
+          <div class="menu">
+            <div class="menu-sand"></div>
+            <p>Admin</p>
+          </div>
+          <div class="container-user-info">
+            <div class="user-info-name">
+              <p>Mr Tahiry</p>
+            </div>
+            <div class="user-info-img"></div>
+          </div>
+        </div>
+        <hr />
+      </section>
+      <section class="container-bell">
+        <button class="bell">
+          <span>10</span>
+          <i class="fa fa-bell"></i>
+        </button>
+      </section>
+      <section class="background">
+        <div class="back back1"></div>
+        <div class="back back2"></div>
+        <div class="back back3"></div>
+      </section>
+      <section class="container-notification">
+        <div class="notif-title">
+          <p>NOTIFICATIONS</p>
+        </div>
+        <section class="all-notif"></section>
+      </section>
+    </header>
+    <section class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">
+          <div class="swiper-container-vertical">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Vertical 1</div>
+              <div class="swiper-slide">Vertical 2</div>
+              <div class="swiper-slide">Vertical 3</div>
+            </div>
+            <section class="container-navigate">
+              <button class="btn swiper-button-up">
+                <i class="fa fa-arrow-up"></i>
+              </button>
+              <hr />
+              <button class="btn swiper-button-down">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
+
+    <script src="package/swiper-bundle.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/notif.js"></script>
+  </body>
+</html>
