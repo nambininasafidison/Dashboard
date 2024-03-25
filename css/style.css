@@ -23,16 +23,15 @@ body {
   height: 90vh;
   width: 94vw;
   overflow: hidden;
+  /* color: #fff; */
 }
 
 .swiper-container-vertical .swiper-wrapper{
-  background-color: #0f0;
   height: 78vh;
   width: 94vw;
 }
 
 .swiper-container-vertical .swiper-wrapper .swiper-slide{
-  color: #190306;
   height: 78vh;
   width: 94vw;
 }

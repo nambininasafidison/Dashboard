@@ -1,31 +1,40 @@
-const stck = document.getElementById("sens");
-let option = document.querySelector(".option");
+const selectElement = document.getElementById("sens");
+const optionsContainer = document.querySelector(".option");
 
-let check = 0;
 
-stck.addEventListener("change", () => {
-  if(document.querySelector("#sens").value == 1){
-  option.innerHTML = `Swap directory : <input type="text" name="rep" id="" placeholder="/var/spool/squid" ><br>Taille du swap directory: <input type="number" name="stck" id="" placeholder="9999 MB" min="0"><br>Nombre de sous-répertoire : <input type="number" min="0" name="srep" id="" placeholder="16"><br>Nombre de fichier : <input type="number" min="0" name="file" id="" placeholder="256"><br>`;
+function updateOptions(selectedValue) {
+  let htmlContent = '';
+  
+  if (selectedValue === '1') {
+    htmlContent = `
+      <div class="input">
+        <label for="swapDir">Swap directory</label>
+        <input type="text" id="swapDir" name="rep" placeholder="/var/spool/squid">
+      </div>
+      <div class="input">
+        <label for="swapSize">Taille du swap directory</label>
+        <input type="number" id="swapSize" name="stck" placeholder="9999 MB" min="0">
+      </div>
+      <div class="input">
+        <label for="subDirCount">Nombre de sous-répertoire</label>
+        <input type="number" id="subDirCount" name="srep" placeholder="16" min="0">
+      </div>
+      <div class="input">
+        <label for="fileCount">Nombre de fichier</label>
+        <input type="number" id="fileCount" name="file" placeholder="256" min="0">
+      </div>`;
+  } else if (selectedValue === '2') {
+    htmlContent = `
+      <div class="input">
+        <label for="memorySize">Taille du mémoire:</label>
+        <input type="number" id="memorySize" name="stck" placeholder="9999 MB" min="0">
+      </div>`;
   }
-  else{
-    option.innerHTML = `Taille du mémoire: <input type="number" name="stck" id="" placeholder="9999 MB" min="0"><br>`;
-  }
-  option.style.display = "block";
-});
+  
+  optionsContainer.innerHTML = htmlContent;
+  optionsContainer.style.display = 'block';
+}
 
-// stck2.addEventListener("change", () => {
-//   option.innerHTML = `Taille du mémoire: <input type="number" name="stck" id="" placeholder="9999 MB" min="0"><br>`;
-//   option.style.display = "block";
-// });
-
-const active = document.querySelector("button");
-
-active.addEventListener("click", () => {
-  if (check == 0) {
-    active.textContent = "Desactive";
-    check = 1;
-  } else {
-    active.textContent = "Active";
-    check = 0;
-  }
+selectElement.addEventListener('change', () => {
+  updateOptions(selectElement.value);
 });

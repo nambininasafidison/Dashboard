@@ -1,15 +1,15 @@
-.main {
+.logStat {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.con {
+.conLogStat {
   position: relative;
   overflow: hidden;
 }
 
-.containerdir {
+.conLogStat .containerdir {
   width: 60vw;
   height: 66vh;
   background-color: #fff;
@@ -18,7 +18,7 @@
 }
 
 
-.square {
+.conLogStat .square {
   width: 8vw;
   height: 10vw;
   position: absolute;
@@ -28,22 +28,23 @@
   transform: rotate(60deg);
 }
 
-.square1 {
+.conLogStat .square1 {
   right: -4vw;
   top: 30vh;
 }
 
-.square2 {
+.conLogStat .square2 {
   right: -2vw;
   top: 40vh;
 }
 
-.square3 {
+.conLogStat .square3 {
   right: 0;
   top: 50vh;
 }
 
-.dir {
+.conLogStat .dir {
+  overflow: hidden;
   width: 60vw;
   height: 60vh;
   background-color: #fff;
@@ -56,7 +57,7 @@
   align-items: center;
 }
 
-.dir .left{
+.conLogStat .dir .left{
   width: 20vw;
   height: 40vh;
   display: flex;
@@ -66,7 +67,7 @@
   padding: 2vh 1vw;
 }
 
-.dir .left .log{
+.conLogStat .dir .left .log{
   width: 17vw;
   height: 27vh;
   margin-bottom: 1vh;
@@ -75,12 +76,12 @@
   background-size: cover;
 }
 
-.dir .left h1{
+.conLogStat .dir .left h1{
   font-size: 1.5vw;
   margin-top: 2vh;
 }
 
-.dir .right{
+.conLogStat .dir .right{
   width: 20vw;
   height: 40vh;
   display: flex;
@@ -90,7 +91,7 @@
   padding: 2vh 1vw;
 }
 
-.dir .right .stat{
+.conLogStat .dir .right .stat{
   width: 17vw;
   height: 27vh;
   margin-bottom: 1vh;
@@ -99,7 +100,7 @@
   background-size: cover;
 }
 
-.dir .right h1{
+.conLogStat .dir .right h1{
   font-size: 1.5vw;
   margin-top: 2vh;
 }

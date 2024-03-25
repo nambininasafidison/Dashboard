@@ -51,41 +51,77 @@
         <div class="dir">
           <form action="http://www.proxy.com/test.php" method="post">
             <div class="left">
-
-              Numero de port d'écoute : 
-              <select name="port">
-                  <option value="3128" >3128</option>
-                  <option value="8080" >8080</option>
-              </select>
-              Type de stockage de cache : 
-              <select id="sens" name="contact">
-                  <option value="1" >Système de fichier</option>
-                  <option value="2" >Memoire</option>
-              </select>
-              <div class="option"></div>
+              <div class="port">
+                <label for="port">port</label>
+                <select id="port" name="port">
+                  <option value="3128">3128</option>
+                  <option value="8080">8080</option>
+                </select>
+              </div>
+              <div class="sens">
+                <label for="sens">cache</label>
+                <select id="sens" name="contact">
+                  <option value="1">Système de fichier</option>
+                  <option value="2">Memoire</option>
+                </select>
+                <div class="option"></div>
+              </div>
             </div>
             <div class="right">
-
-              Taille maximale de mis en cache (en MB): <input type="number" min="0" name="taille" id="" placeholder="4 MB">
-              Temps minimum de mis en cache : <input type="number" min="0" name="min_time" id="" placeholder="15 hours">
-              Temps maximum de mis en cache : <input type="number" min="0" name="max_time" id="" placeholder="24 hours">
-              Ajouter une liste d'URL que Squid ne doit jamais mettre en cache : <input type="text" name="url_never" id="" placeholder="*.mp3 *.avi">
-              Ajouter une liste d'URL à télécharger directement : <input type="text" name="url_download" id="" placeholder="*.exe *.zip">
-              Format des fichiers journaux : 
-              <select id="sens" name="log">
-                <option value="common" >common</option>
-                <option value="squid" >squid</option>
-              </select>
-              Nom d'hôte que Squid affiche aux clients : <input type="text" name="hote" id="" placeholder="www.example.com">
-              
-              
-              <input type="submit" value="Configure">
+              <div class="input">
+                <label for=""> Taille maximale de mis en cache (en MB): </label>
+                <input
+                  type="number"
+                  min="0"
+                  name="taille"
+                  id=""
+                  placeholder="4 MB"
+                />
+              </div>
+              <div class="input">
+                <label for=""> Temps minimum de mis en cache : </label>
+                <input
+                  type="number"
+                  min="0"
+                  name="min_time"
+                  id=""
+                  placeholder="15 hours"
+                />
+              </div>
+              <div class="input">
+                <label for=""> Temps maximum de mis en cache : </label>
+                <input
+                  type="number"
+                  min="0"
+                  name="max_time"
+                  id=""
+                  placeholder="24 hours"
+                />
+              </div>
+              <div class="input">
+                <label for=""> Format des fichiers journaux : </label>
+                <select id="sens" name="log">
+                  <option value="common">common</option>
+                  <option value="squid">squid</option>
+                </select>
+              </div>
+              <div class="input">
+                <label for="">
+                  Nom d'hôte que Squid affiche aux clients :
+                </label>
+                <input
+                  type="text"
+                  name="hote"
+                  id=""
+                  placeholder="www.example.com"
+                />
+              </div>
             </div>
-        </form>
-    
-        <div class="square square1"></div>
-        <div class="square square2"></div>
-        <div class="square square3"></div>
+          </form>
+
+          <div class="square square1"></div>
+          <div class="square square2"></div>
+          <div class="square square3"></div>
         </div>
         <div class="containerdir"></div>
       </div>
@@ -109,3 +145,22 @@
     <script src="../js/proxy.js"></script>
   </body>
 </html>
+<!-- 
+Ajouter une liste d'URL que Squid ne doit jamais mettre en cache :
+              <input
+                type="text"
+                name="url_never"
+                id=""
+                placeholder="*.mp3 *.avi"
+              />
+              Ajouter une liste d'URL à télécharger directement :
+              <input
+                type="text"
+                name="url_download"
+                id=""
+                placeholder="*.exe *.zip"/>
+              <input type="submit" value="Configure" />
+               -->
+
+
+               

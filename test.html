@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swiper Horizontal avec Vertical Imbriqué et Navigation</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="package/swiper-bundle.css" />
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="css/navigate.css" />
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/notification.css" />
+    <link rel="stylesheet" href="css/log-stat.css" />
+    <link rel="stylesheet" href="css/proxy.css" />
   </head>
   <body>
     <header>
@@ -69,6 +71,149 @@
           </div>
         </div>
         <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">
+          <div class="swiper-container-vertical">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide proxy">
+                <div class="conProxy">
+                  <div class="dir">
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+              <div class="swiper-slide proxy">
+                <div class="conProxy">
+                  <div class="dir">
+                    <form action="http://www.proxy.com/test.php" method="post">
+                      <div class="left">
+                        <div class="port">
+                          <label for="port">port</label>
+                          <select id="port" name="port">
+                            <option value="3128">3128</option>
+                            <option value="8080">8080</option>
+                          </select>
+                        </div>
+                        <div class="sens">
+                          <label for="sens">cache</label>
+                          <select id="sens" name="contact">
+                            <option value="1">Système de fichier</option>
+                            <option value="2">Memoire</option>
+                          </select>
+                          <div class="option"></div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="input">
+                          <label for="">
+                            Taille maximale de mis en cache (en MB):
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            name="taille"
+                            id=""
+                            placeholder="4 MB"
+                          />
+                        </div>
+                        <div class="input">
+                          <label for="">
+                            Temps minimum de mis en cache :
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            name="min_time"
+                            id=""
+                            placeholder="15 hours"
+                          />
+                        </div>
+                        <div class="input">
+                          <label for="">
+                            Temps maximum de mis en cache :
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            name="max_time"
+                            id=""
+                            placeholder="24 hours"
+                          />
+                        </div>
+                        <div class="input">
+                          <label for=""> Format des fichiers journaux : </label>
+                          <select id="sens" name="log">
+                            <option value="common">common</option>
+                            <option value="squid">squid</option>
+                          </select>
+                        </div>
+                        <div class="input">
+                          <label for="">
+                            Nom d'hôte que Squid affiche aux clients :
+                          </label>
+                          <input
+                            type="text"
+                            name="hote"
+                            id=""
+                            placeholder="www.example.com"
+                          />
+                        </div>
+                      </div>
+                    </form>
+
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+              <div class="swiper-slide proxy">
+                <div class="conProxy">
+                  <div class="dir">
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
+            </div>
+            <section class="container-navigate">
+              <button class="btn swiper-button-up">
+                <i class="fa fa-arrow-up"></i>
+              </button>
+              <hr />
+              <button class="btn swiper-button-down">
+                <i class="fa fa-arrow-down"></i>
+              </button>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-slide logStat">
+          <div class="conLogStat">
+            <div class="dir">
+              <div class="left">
+                <a href="">
+                  <div class="log"></div>
+                </a>
+                <h1>Log</h1>
+              </div>
+              <div class="right">
+                <a href="">
+                  <div class="stat"></div>
+                </a>
+                <h1>Statistiques</h1>
+              </div>
+              <div class="square square1"></div>
+              <div class="square square2"></div>
+              <div class="square square3"></div>
+            </div>
+            <div class="containerdir"></div>
+          </div>
+        </div>
       </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>

@@ -1,32 +1,37 @@
-.main {
+.proxy {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.con {
+.conProxy {
   position: relative;
   overflow: hidden;
 }
 
-.containerdir {
+/* .conf{
+  overflow: visible;
+} */
+
+.conProxy .containerdir {
   width: 60vw;
   height: 66vh;
   background-color: #fff;
   border-radius: 1.5vw;
-  clip-path: polygon(
-    0 0,
-    15% 0,
-    20% 9%,
-    97% 9%,
-    100% 14%,
-    100% 100%,
-    0 100%
-  );
+  clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
 }
 
+/* .conf .containerdir{
+  width: 30vw;
+  background-color: #000;
+  margin-top: -15vh;
+}
 
-.square{
+.conf .confDir{
+  width: 30vw;
+} */
+
+.conProxy .square {
   width: 8vw;
   height: 10vw;
   position: absolute;
@@ -36,22 +41,22 @@
   transform: rotate(60deg);
 }
 
-.square1{
+.conProxy .square1 {
   right: -4vw;
-  top:  30vh;
+  top: 30vh;
 }
 
-.square2{
+.conProxy .square2 {
   right: -2vw;
   top: 40vh;
 }
 
-.square3{
-right: 0;
-top: 50vh;
+.conProxy .square3 {
+  right: 0;
+  top: 50vh;
 }
 
-.dir {
+.conProxy .dir {
   width: 60vw;
   height: 60vh;
   background-color: #fff;
@@ -63,7 +68,7 @@ top: 50vh;
   padding: 2vw;
 }
 
-.dir form{
+.conProxy .dir form {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -71,15 +76,138 @@ top: 50vh;
   height: 50vh;
 }
 
-.dir .left{
-  background-color: #f00;
-  width: 25vw;
+.conProxy .dir .left {
+  width: 20vw;
   height: 45vh;
+  position: relative;
 }
 
-.dir .right{
+.conProxy .dir .left .port {
+  position: relative;
+  left: 2.5vw;
+  height: 10vh;
+}
+
+.conProxy .dir .left .port select {
+  width: 15vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 0.8vw;
+}
+
+.conProxy .dir .left .port label {
+  position: absolute;
+  font-size: 1vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conProxy .dir .left .sens {
+  position: relative;
+  left: 2.5vw;
+  z-index: 2;
+}
+
+.conProxy .dir .left .sens select {
+  width: 15vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 0.8vw;
+}
+
+.conProxy .dir .left .sens label {
+  position: absolute;
+  font-size: 1vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conProxy .dir .left .sens .option {
+  border: 1px solid #000;
+  border-radius: 1vw;
+  width: 18vw;
+  position: absolute;
+  top: 2.5vh;
+  left: -1.5vw;
+  z-index: -1;
+  padding: 3vh 0.5vw 2vh 0.5vw;
+  height: 36vh;
+}
+
+.conProxy .dir .left .sens .option .input {
+  position: relative;
+  left: 0;
+  margin: 3vh 0;
+}
+
+.conProxy .dir .left .sens .option .input input {
+  width: 17vw;
+  height: 5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 0.8vw;
+  color: #000;
+}
+
+.conProxy .dir .left .sens .option .input input::placeholder {
+  color: #999;
+}
+
+.conProxy .dir .left .sens .option .input label {
+  position: absolute;
+  font-size: 0.8vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conProxy .dir .right {
   z-index: 4;
-  background-color: #0f0;
-  width: 25vw;
-  height: 45vh;
+  width: 30vw;
+  height: 55vh;
+  padding-left: 3vw;
+}
+
+.conProxy .dir .right .input {
+  position: relative;
+  left: 0;
+  margin: 4.5vh 0;
+}
+
+.conProxy .dir .right .input input,
+select {
+  width: 22vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 0.5vw;
+  font-size: 1vw;
+  color: #000;
+}
+
+.conProxy .dir .right .input input::placeholder {
+  color: #999;
+}
+
+.conProxy .dir .right .input label {
+  position: absolute;
+  font-size: 0.8vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
 }
