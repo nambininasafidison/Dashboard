@@ -1,0 +1,96 @@
+.acl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conAcl {
+  position: relative;
+  overflow: hidden;
+}
+
+.conAcl .containerdir {
+  width: 85vw;
+  height: 85vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.conAcl .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.conAcl .square1 {
+  right: -4vw;
+  top: 45vh;
+}
+
+.conAcl .square2 {
+  right: -2vw;
+  top: 55vh;
+}
+
+.conAcl .square3 {
+  right: 0;
+  top: 65vh;
+}
+
+.conAcl .dir {
+  width: 85vw;
+  height: 79vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.conAcl .dir .container{
+    width: 20vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
+}
+
+.conAcl .dir .container .containerImg{
+    width: 17vw;
+    height: 40vh;
+    margin-bottom: 5vh;
+}
+
+.conAcl .dir .container h1{
+    font-size: 1.5vw;
+}
+
+.conAcl .dir .container .accessImg{
+    background-image: url(../assets/access.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.conAcl .dir .container .directImg{
+    background-image: url(../assets/access.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.conAcl .dir .container .statusImg{
+    background-image: url(../assets/status.svg);
+    background-position: center;
+    background-size: cover;
+}

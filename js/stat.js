@@ -48,17 +48,17 @@ let sitePopChart;
 
 function fetchData() {
   let xhr = new XMLHttpRequest();
-  xhr.open('GET', '../stat/backend_test/json.php', true);
+  xhr.open('GET', './data/backend_test/json.php', true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
               labelSitePop = [];
               dataSitePop = [];
-              for(let sitePop of tabSitePop){
-                  labelSitePop.push(sitePop.domain);
-                  dataSitePop.push(sitePop.number);
-              }
+              // for(let sitePop of tabSitePop){
+              //     labelSitePop.push(sitePop.domain);
+              //     dataSitePop.push(sitePop.number);
+              // }
               console.log(dataSitePop);
               console.log(labelSitePop);
               

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/notification.css" />
     <link rel="stylesheet" href="css/log-stat.css" />
     <link rel="stylesheet" href="css/proxy.css" />
+    <link rel="stylesheet" href="css/stat.css" />
+    <link rel="stylesheet" href="css/acl.css" />
   </head>
   <body>
     <header>
@@ -51,13 +53,123 @@
     </header>
     <section class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide stat">
+          <section class="container-charts">
+            <section class="chart-top">
+              <div class="chart-top-left">
+                <div class="container-chart-traffic">
+                  <canvas id="chart-traffic" width="500" height="200"></canvas>
+                </div>
+                <div class="containerdir"></div>
+              </div>
+              <div class="chart-top-right">
+                <div class="container-chart-traffic-content">
+                  <canvas id="chart-traffic-content"></canvas>
+                </div>
+                <div class="containerdirChart"></div>
+              </div>
+            </section>
+            <section class="chart-bottom">
+              <div class="chart-bottom-left">
+                <div class="proxy-state"></div>
+              </div>
+              <div class="chart-bottom-center">
+                <div class="navigate-level-sitePop">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="container-chart-sitePop">
+                  <canvas id="chart-sitePop"></canvas>
+                </div>
+              </div>
+              <div class="chart-bottom-right">
+                <div class="container-chart-proxyCharge">
+                  <canvas id="chart-proxyCharge"></canvas>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
         <div class="swiper-slide">
           <div class="swiper-container-vertical">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Vertical 1</div>
-              <div class="swiper-slide">Vertical 2</div>
-              <div class="swiper-slide">Vertical 3</div>
+              <div class="swiper-slide">
+                <div class="swiper-slide admin">
+                  <div class="conAdmin">
+                    <div class="containerImg proxyImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Configurer votre proxy</h1>
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                  <div class="conAdmin">
+                    <div class="containerImg aclImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Gerer votre ACL</h1>
+                      </div>
+
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide admin">
+                  <div class="conAdmin">
+                    <div class="containerImg logImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Superviser vos logs et vos stats</h1>
+                      </div>
+
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                  <div class="conAdmin">
+                    <div class="containerImg dhcpImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Configurer votre serveur dhcp</h1>
+                      </div>
+
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide admin">
+                  <div class="conAdmin">
+                    <div class="containerImg firewallImg"></div>
+                    <div class="dir">
+                      <div class="container access">
+                        <h1>Configurer votre pare-feu</h1>
+                      </div>
+                      <div class="square square1"></div>
+                      <div class="square square2"></div>
+                      <div class="square square3"></div>
+                    </div>
+                    <div class="containerdir"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <section class="container-navigate">
               <button class="btn swiper-button-up">
@@ -70,7 +182,30 @@
             </section>
           </div>
         </div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">
+          <div class="swiper-slide acl">
+            <div class="conAcl">
+              <div class="dir">
+                <div class="container access">
+                  <div class="containerImg accessImg"></div>
+                  <h1>access</h1>
+                </div>
+                <div class="container direct">
+                  <div class="containerImg directImg"></div>
+                  <h1>directive</h1>
+                </div>
+                <div class="container status">
+                  <div class="containerImg statusImg"></div>
+                  <h1>status</h1>
+                </div>
+                <div class="square square1"></div>
+                <div class="square square2"></div>
+                <div class="square square3"></div>
+              </div>
+              <div class="containerdir"></div>
+            </div>
+          </div>
+        </div>
         <div class="swiper-slide">
           <div class="swiper-container-vertical">
             <div class="swiper-wrapper">
@@ -192,6 +327,7 @@
             </section>
           </div>
         </div>
+
         <div class="swiper-slide logStat">
           <div class="conLogStat">
             <div class="dir">
@@ -220,6 +356,8 @@
     </section>
 
     <script src="package/swiper-bundle.js"></script>
+    <script src="js/chart.js-4.4.2/package/dist/chart.umd.js"></script>
+    <script src="js/stat.js"></script>
     <script src="js/index.js"></script>
     <script src="js/notif.js"></script>
   </body>

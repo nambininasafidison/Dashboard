@@ -23,139 +23,123 @@ body {
   height: 90vh;
   width: 94vw;
   overflow: hidden;
-  /* color: #fff; */
 }
 
-.swiper-container-vertical .swiper-wrapper{
+.swiper-container-vertical .swiper-wrapper {
   height: 78vh;
   width: 94vw;
 }
 
-.swiper-container-vertical .swiper-wrapper .swiper-slide{
+.swiper-container-vertical .swiper-wrapper .swiper-slide {
   height: 78vh;
   width: 94vw;
 }
 
-/* 
-.swiper-container-vertical {
-  height: 300px; 
-}
-
-
-.menu-admin {
-  width: 100%;
-  height: 70vh;
-}
-
-.menu-admin .option-admin {
-  position: absolute;
-  width: 100%;
-  height: 70vh;
-}
-
-.menu-admin .option-admin-1 {
+.admin {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
 }
 
-.menu-admin .option-admin-1 .container-option-1 {
-  width: 90vw;
-  height: 70vh;
-  display: none;
-}
-
-.menu-admin .option-admin-1 .container-option-1 div {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-admin .option-admin-1 .container-option-1 div .card-option {
-  width: 25vw;
-  height: 40vh;
-  background-color: #ffffff;
-  border-radius: 10px;
+.conAdmin {
   position: relative;
 }
 
-.menu-admin .option-admin-1 .container-option-1 div .card-option span {
-  width: 80px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  position: absolute;
-  top: -20px;
-  left: 0;
+.conAdmin .containerdir {
+  width: 25vw;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 20% 0, 25% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
 }
 
-#img-proxy {
-  width: 50%;
+.conAdmin .square {
+  width: 8vw;
+  height: 10vw;
   position: absolute;
-  top: -28px;
-  right: 0;
-}
-#option-name-proxy {
-  height: 2vh;
-  position: absolute;
-  bottom: 8vh;
-  right: 20px;
-  font-size: 1.3rem;
-}
-#img-red-left {
-  width: 20%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
 }
 
-#img-acl {
-  width: 50%;
-  position: absolute;
-  top: -28px;
-  right: 0;
-  z-index: 5;
-}
-#option-name-acl {
-  height: 2vh;
-  position: absolute;
-  bottom: 10vh;
-  left: 20px;
-  font-size: 1.3rem;
-}
-#img-red-right {
-  width: 20%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.conAdmin .square1 {
+  right: -6vw;
+  top: 30vh;
 }
 
-.menu-admin .option-admin-2 {
-  background-color: bisque;
-  display: none;
+.conAdmin .square2 {
+  right: -4vw;
+  top: 40vh;
 }
 
-.menu-admin .option-admin-3 {
-  background-color: blanchedalmond;
-  display: none;
+.conAdmin .square3 {
+  right: -2vw;
+  top: 50vh;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-admin .option-admin-1 .container-option-1 {
-    flex-direction: column;
-  }
-  .menu-admin .option-admin-1 .container-option-1 div {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .menu-admin .option-admin-1 .container-option-1 div .card-option {
-    width: 40vw;
-    height: 25vh;
-    background-color: #ffffff;
-    border-radius: 10px;
-  }
-} */
+.conAdmin .dir {
+  width: 25vw;
+  height: 59vh;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.conAdmin .dir .container {
+  width: 20vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conAdmin .dir .container {
+  width: 10vw;
+  margin: 15vh 0 0 -10vw;
+}
+
+.conAdmin .containerImg {
+  width: 12vw;
+  height: 30vh;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  top: -4vh;
+  left: 9vw;
+  z-index: 10;
+}
+
+.conAdmin .proxyImg {
+  background-image: url(../assets/proxy.png);
+}
+
+.conAdmin .aclImg {
+  background-image: url(../assets/ACL.png);
+}
+
+.conAdmin .logImg {
+  background-image: url(../assets/logs.png);
+  left: 8vw;
+  width: 16vw;
+}
+
+.conAdmin .dhcpImg {
+  background-image: url(../assets/dhcp.png);
+}
+
+.conAdmin .firewallImg {
+  background-image: url(../assets/access.svg);
+}
+
+.conAdmin .dir .container h1 {
+  font-size: 1.5vw;
+}
