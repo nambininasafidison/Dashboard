@@ -1,0 +1,58 @@
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .conLog {
+    position: relative;
+    overflow: hidden;
+    margin-top: -10vh;
+  }
+  
+  
+  .conLog .containerdir {
+    width: 80vw;
+    height: 75vh;
+    background-color: #fff;
+    border-radius: 1.5vw;
+    clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+  }
+  
+  .conLog .square {
+    width: 8vw;
+    height: 10vw;
+    position: absolute;
+    background-color: #f009;
+    z-index: 3;
+    border-radius: 1vw;
+    transform: rotate(60deg);
+  }
+  
+  .conLog .square1 {
+    right: -4vw;
+    top: 40vh;
+  }
+  
+  .conLog .square2 {
+    right: -2vw;
+    top: 50vh;
+  }
+  
+  .conLog .square3 {
+    right: 0;
+    top: 60vh;
+  }
+  
+  .conLog .dir {
+    width: 80vw;
+    height: 69vh;
+    background-color: #fff;
+    border-radius: 1.5vw;
+    position: absolute;
+    top: 5.9vh;
+    z-index: 2;
+    overflow: hidden;
+    padding: 2vw;
+  }
+  

@@ -7,11 +7,12 @@
 .conAcl {
   position: relative;
   overflow: hidden;
+  margin-top: -10vh;
 }
 
 .conAcl .containerdir {
-  width: 85vw;
-  height: 85vh;
+  width: 80vw;
+  height: 75vh;
   background-color: #fff;
   border-radius: 1.5vw;
   clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
@@ -29,68 +30,61 @@
 
 .conAcl .square1 {
   right: -4vw;
-  top: 45vh;
+  top: 40vh;
 }
 
 .conAcl .square2 {
   right: -2vw;
-  top: 55vh;
+  top: 50vh;
 }
 
 .conAcl .square3 {
   right: 0;
-  top: 65vh;
+  top: 60vh;
 }
 
 .conAcl .dir {
-  width: 85vw;
-  height: 79vh;
+  width: 80vw;
+  height: 69vh;
   background-color: #fff;
   border-radius: 1.5vw;
   position: absolute;
   top: 5.9vh;
   z-index: 2;
-  overflow: hidden;
   padding: 2vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.conAcl .dir .container{
-    width: 20vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -10vh;
+.conAcl .dir .containerAcl {
+  width: 20vw;
+  height: 60vh;
+  text-align: center;
+  font-size: 1.5vw;
+  margin-top: -20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.conAcl .dir .container .containerImg{
-    width: 17vw;
-    height: 40vh;
-    margin-bottom: 5vh;
+.conAcl .dir .containerAcl .containerImg {
+  width: 17vw;
+  height: 40vh;
+  margin-bottom: 10vh;
+  background-position: center;
+  background-size: cover;
 }
 
-.conAcl .dir .container h1{
-    font-size: 1.5vw;
+.conAcl .dir .containerAcl .accessImg{
+  background-image: url(../assets/access.png);
 }
 
-.conAcl .dir .container .accessImg{
-    background-image: url(../assets/access.svg);
-    background-position: center;
-    background-size: cover;
+.conAcl .dir .containerAcl .directImg{
+  background-image: url(../assets/directive.svg);
 }
 
-.conAcl .dir .container .directImg{
-    background-image: url(../assets/access.svg);
-    background-position: center;
-    background-size: cover;
-}
-
-.conAcl .dir .container .statusImg{
-    background-image: url(../assets/status.svg);
-    background-position: center;
-    background-size: cover;
+.conAcl .dir .containerAcl .statusImg{
+  background-image: url(../assets/status.svg);
 }
