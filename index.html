@@ -231,7 +231,25 @@
               <div class="swiper-slide dhcp">
                 <div class="conDhcp">
                   <div class="dir">
-                    <h1>dhcp</h1>
+                    <div class="containerDhcp">
+                      <div class="dhcpImg"></div>
+                      <h1>configurer votre serveur dhcp</h1>
+                    </div>
+                    <div class="containerInput">
+                      <div class="input">
+                        <label for="reseau"> reseau</label>
+                        <input id="reseau" type="text" />
+                      </div>
+                      <div class="input">
+                        <label for="cid"> CIDR</label>
+                        <input id="cid" type="text" />
+                      </div>
+                      <div class="input">
+                        <label for="dns"> DNS</label>
+                        <input id="dns" type="text" />
+                      </div>
+                      <button class="suivant">suivant</button>
+                    </div>
                     <div class="square square1"></div>
                     <div class="square square2"></div>
                     <div class="square square3"></div>
@@ -242,12 +260,40 @@
               <div class="swiper-slide dhcp">
                 <div class="conDhcp">
                   <div class="dir">
+                    <div class="containerDchp">
+                      <div class="dhcpImg dhcpImg2"></div>
+                      <h1>Plage d'IP</h1>
+                    </div>
+                    <div class="containerInput">
+                      <div class="line">
+                        <button>L1</button>
+                        <input id="L1" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>L2</button>
+                        <input id="L2" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>L3</button>
+                        <input id="L3" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>M1</button>
+                        <input id="M1" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>M2</button>
+                        <input id="M2" type="text" />
+                      </div>
+                    </div>
+
                     <div class="square square1"></div>
                     <div class="square square2"></div>
                     <div class="square square3"></div>
                   </div>
                   <div class="containerdir"></div>
                 </div>
+                <button class="configurer">configurer</button>
               </div>
             </div>
             <section class="container-navigate">

@@ -1,57 +1,96 @@
 .dhcp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conDhcp {
+  position: relative;
+  overflow: hidden;
+  margin-top: -10vh;
+}
+
+.conDhcp .containerdir {
+  width: 80vw;
+  height: 75vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.conDhcp .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.conDhcp .square1 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.conDhcp .square2 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.conDhcp .square3 {
+  right: 0;
+  top: 60vh;
+}
+
+.conDhcp .dir {
+  width: 80vw;
+  height: 69vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conDhcp .containerDhcp {
+  width: 17vw;
+  height: 32vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: -8vh;
+}
+
+.conDhcp .containerDhcp .dhcpImg {
+  background-image: url(../assets/Dchp.svg);
+  background-position: center;
+  background-size: cover;
+  width: 11vw;
+  height: 11vw;
+}
+
+.conDhcp .containerDhcp .dhcpImg2 {
+    background-image: url(../assets/Dchp.svg);
+    background-color: #f00;
+    background-position: center;
+    background-size: cover;
+    width: 11vw;
+    height: 11vw;
   }
-  
-  .conDhcp {
-    position: relative;
-    overflow: hidden;
-    margin-top: -10vh;
-  }
-  
-  .conDhcp .containerdir {
-    width: 80vw;
-    height: 75vh;
-    background-color: #fff;
-    border-radius: 1.5vw;
-    clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
-  }
-  
-  .conDhcp .square {
-    width: 8vw;
-    height: 10vw;
-    position: absolute;
-    background-color: #f009;
-    z-index: 3;
+
+.conDhcp .containerInput {
+    width: 20vw;
+    height: 30vh;
+    border: 1px solid #000;
+    margin-top: 5vh;
     border-radius: 1vw;
-    transform: rotate(60deg);
-  }
-  
-  .conDhcp .square1 {
-    right: -4vw;
-    top: 40vh;
-  }
-  
-  .conDhcp .square2 {
-    right: -2vw;
-    top: 50vh;
-  }
-  
-  .conDhcp .square3 {
-    right: 0;
-    top: 60vh;
-  }
-  
-  .conDhcp .dir {
-    width: 80vw;
-    height: 69vh;
-    background-color: #fff;
-    border-radius: 1.5vw;
-    position: absolute;
-    top: 5.9vh;
-    z-index: 2;
-    overflow: hidden;
-    padding: 2vw;
-  }
-  
+    padding: 2vh;
+}
