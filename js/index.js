@@ -15,3 +15,25 @@ var swiperVertical = new Swiper(".swiper-container-vertical", {
     prevEl: ".swiper-button-up",
   },
 });
+
+
+document.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "ArrowLeft":
+      swiperHorizontal.slidePrev();
+      break;
+    case "ArrowRight":
+      swiperHorizontal.slideNext();
+      break;
+    case "ArrowUp":
+      swiperVertical.map((item) => {
+        item.slidePrev();
+      });
+      break;
+    case "ArrowDown":
+      swiperVertical.map((item) => {
+        item.slideNext();
+      });
+      break;
+  }
+});

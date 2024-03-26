@@ -30,17 +30,29 @@
 
 .conAcl .square1 {
   right: -4vw;
+<<<<<<< HEAD
   top: 30vh;
+=======
+  top: 40vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
 }
 
 .conAcl .square2 {
   right: -2vw;
+<<<<<<< HEAD
   top: 40vh;
+=======
+  top: 50vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
 }
 
 .conAcl .square3 {
   right: 0;
+<<<<<<< HEAD
   top: 50vh;
+=======
+  top: 60vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
 }
 
 .conAcl .dir {
@@ -51,6 +63,40 @@
   position: absolute;
   top: 5.9vh;
   z-index: 2;
-  overflow: hidden;
   padding: 2vw;
 }
+<<<<<<< HEAD
+=======
+
+.conAcl .dir .containerAcl {
+  width: 20vw;
+  height: 60vh;
+  text-align: center;
+  font-size: 1.5vw;
+  margin-top: -20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conAcl .dir .containerAcl .containerImg {
+  width: 17vw;
+  height: 40vh;
+  margin-bottom: 10vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.conAcl .dir .containerAcl .accessImg{
+  background-image: url(../assets/access.png);
+}
+
+.conAcl .dir .containerAcl .directImg{
+  background-image: url(../assets/directive.svg);
+}
+
+.conAcl .dir .containerAcl .statusImg{
+  background-image: url(../assets/status.svg);
+}
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d

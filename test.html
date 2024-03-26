@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>Admin</title>
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="package/swiper-bundle.css" />
     <link rel="stylesheet" href="css/navigate.css" />
+=======
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/notification.css" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/log-stat.css" />
     <link rel="stylesheet" href="css/proxy.css" />
     <link rel="stylesheet" href="css/stat.css" />
     <link rel="stylesheet" href="css/acl.css" />
     <link rel="stylesheet" href="css/log.css">
     <link rel="stylesheet" href="css/dhcp.css">
+=======
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/navigate.css" />
+    <link rel="stylesheet" href="package/swiper-bundle.css" />
+    <title>Dashboard</title>
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
   </head>
   <body>
     <header>
@@ -50,74 +60,66 @@
         <div class="notif-title">
           <p>NOTIFICATIONS</p>
         </div>
-        <section class="all-notif"></section>
+        <section class="all-notif">
+        </section>
       </section>
     </header>
-    <section class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide stat">
-          <section class="container-charts">
-            <section class="chart-top">
-              <div class="chart-top-left">
-                <div class="container-chart-traffic">
-                  <canvas id="chart-traffic" width="500" height="200"></canvas>
-                </div>
-                <div class="containerdir"></div>
-              </div>
-              <div class="chart-top-right">
-                <div class="container-chart-traffic-content">
-                  <canvas id="chart-traffic-content"></canvas>
-                </div>
-                <div class="containerdirChart"></div>
-              </div>
-            </section>
-            <section class="chart-bottom">
-              <div class="chart-bottom-left">
-                <div class="proxy-state"></div>
-              </div>
-              <div class="chart-bottom-center">
-                <div class="navigate-level-sitePop">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="container-chart-sitePop">
-                  <canvas id="chart-sitePop"></canvas>
-                </div>
-              </div>
-              <div class="chart-bottom-right">
-                <div class="container-chart-proxyCharge">
-                  <canvas id="chart-proxyCharge"></canvas>
-                </div>
-              </div>
-            </section>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-container-vertical">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="swiper-slide admin">
-                  <div class="conAdmin">
-                    <div class="containerImg proxyImg"></div>
-                    <div class="dir">
-                      <div class="container access">
-                        <h1>Configurer votre proxy</h1>
-                      </div>
-                      <div class="square square1"></div>
-                      <div class="square square2"></div>
-                      <div class="square square3"></div>
+    <section class="swiper">
+      <section class="swiper-wrapper">
+        <section class="swiper-slide">
+          <section class="menu-admin">
+            <section class="option-admin option-admin-1">
+              <div class="container-option-1">
+                <div>
+                  <button class="card-option" id="option-proxy">
+                    <span></span>
+                    <img src="./assets/proxy.png" alt="" id="img-proxy" />
+                    <img
+                      src="./assets/triple-red-left.png"
+                      alt=""
+                      id="img-red-left"
+                    />
+                    <div id="option-name-proxy">
+                      <p>
+                        Configurer <br />
+                        votre proxy
+                      </p>
                     </div>
-                    <div class="containerdir"></div>
-                  </div>
-                  <div class="conAdmin">
-                    <div class="containerImg aclImg"></div>
-                    <div class="dir">
-                      <div class="container access">
-                        <h1>Gerer votre ACL</h1>
-                      </div>
+                  </button>
+                </div>
+                <div>
+                  <button class="card-option" id="option-acl">
+                    <span></span>
+                    <img src="./assets/ACL.png" alt="" id="img-acl" />
+                    <img
+                      src="./assets/triple-red-right.png"
+                      alt=""
+                      id="img-red-right"
+                    />
+                    <div id="option-name-acl">
+                      <p>
+                        Gérer <br />
+                        votre ACL
+                      </p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </section>
 
+            <section class="option-admin option-admin-2"></section>
+            <section class="option-admin option-admin-3"></section>
+          </section>
+        </section>
+        <section class="swiper-slide">
+          <h1>andarana</h1>
+        </section>
+      </section>
+      <section class="container-progress-bar">
+        <div class="progress-bar"></div>
+      </section>
+
+<<<<<<< HEAD
                       <div class="square square1"></div>
                       <div class="square square2"></div>
                       <div class="square square3"></div>
@@ -449,9 +451,19 @@
 
 
 
+=======
+      <section class="container-navigate">
+        <button class="btn btn-previous">
+          <i class="fa fa-arrow-up"></i>
+        </button>
+        <hr />
+        <button class="btn btn-next">
+          <i class="fa fa-arrow-down"></i>
+        </button>
+      </section>
+    </section>
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
     <script src="package/swiper-bundle.js"></script>
-    <script src="js/chart.js-4.4.2/package/dist/chart.umd.js"></script>
-    <script src="js/stat.js"></script>
     <script src="js/index.js"></script>
     <script src="./js//notif.js"></script>
   </body>

@@ -31,17 +31,29 @@
   
   .conLog .square1 {
     right: -4vw;
+<<<<<<< HEAD
     top: 30vh;
+=======
+    top: 40vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
   }
   
   .conLog .square2 {
     right: -2vw;
+<<<<<<< HEAD
     top: 40vh;
+=======
+    top: 50vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
   }
   
   .conLog .square3 {
     right: 0;
+<<<<<<< HEAD
     top: 50vh;
+=======
+    top: 60vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
   }
   
   .conLog .dir {
