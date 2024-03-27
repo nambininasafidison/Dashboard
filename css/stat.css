@@ -8,7 +8,7 @@
 .stat .containerdir {
   width: 50vw;
   height: 46vh;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 1.5vw;
   clip-path: polygon(0 0, 15% 0, 20% 9%, 97% 9%, 100% 14%, 100% 100%, 0 100%);
 }
@@ -34,7 +34,7 @@
 .stat .container-charts .chart-top .chart-top-left .container-chart-traffic {
   width: 54vw;
   height: 42vh;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   display: flex;
   justify-content: center;
   border-radius: 1.5vw;
@@ -46,18 +46,37 @@
 
 .stat .container-charts .chart-top .chart-top-right {
   position: relative;
+  top: 6vh;
+  z-index: 2;
 }
 
-.stat .container-charts .chart-top .chart-top-right .container-chart-traffic-content {
+.stat .container-charts .chart-top .chart-top-right .containerdirChart {
   width: 34vw;
-  height: 46vh;
+  height: 45vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: -4.5vh;
+  z-index: -1;
+  clip-path: polygon(0% 20%, 5% 10%, 80% 10%, 85% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.stat
+  .container-charts
+  .chart-top
+  .chart-top-right
+  .container-chart-traffic-content {
+  width: 34vw;
+  border-radius: 1.5vw;
+  height: 40.5vh;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.stat .container-charts
+.stat
+  .container-charts
   .chart-top
   .chart-top-right
   .container-chart-traffic-content
@@ -90,7 +109,11 @@
   justify-content: space-evenly;
 }
 
-.stat .container-charts .chart-bottom .chart-bottom-center .container-chart-sitePop {
+.stat
+  .container-charts
+  .chart-bottom
+  .chart-bottom-center
+  .container-chart-sitePop {
   width: 29vw;
   height: 40vh;
   border-radius: 1vw;
@@ -100,7 +123,8 @@
   align-items: center;
 }
 
-.stat .container-charts
+.stat
+  .container-charts
   .chart-bottom
   .chart-bottom-center
   .container-chart-sitePop
@@ -112,20 +136,22 @@
   display: block;
 }
 
-.stat .container-charts
+.stat
+  .container-charts
   .chart-bottom
   .chart-bottom-right
   .container-chart-proxyCharge {
   width: 29vw;
   height: 40vh;
-  border-radius: 1vw; 
+  border-radius: 1vw;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.stat .container-charts
+.stat
+  .container-charts
   .chart-bottom
   .chart-bottom-right
   .container-chart-proxyCharge
@@ -133,9 +159,9 @@
   display: block;
 }
 
-.stat .new-container{
+.stat .new-container {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   z-index: 50;
   width: 100%;
@@ -147,7 +173,7 @@
   backdrop-filter: blur(2px);
 }
 
-.stat .new-container .new-container-chart-traffic{
+.stat .new-container .new-container-chart-traffic {
   width: 54vw;
   height: 42vh;
   background-color: #8a0a0a;
