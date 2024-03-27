@@ -1,62 +1,4 @@
 .dhcp {
-<<<<<<< HEAD
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .conDhcp {
-    position: relative;
-    overflow: hidden;
-    margin-top: -10vh;
-  }
-  
-  .conDhcp .containerdir {
-    width: 80vw;
-    height: 75vh;
-    background-color: #fff;
-    border-radius: 1.5vw;
-    clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
-  }
-  
-  .conDhcp .square {
-    width: 8vw;
-    height: 10vw;
-    position: absolute;
-    background-color: #f009;
-    z-index: 3;
-    border-radius: 1vw;
-    transform: rotate(60deg);
-  }
-  
-  .conDhcp .square1 {
-    right: -4vw;
-    top: 30vh;
-  }
-  
-  .conDhcp .square2 {
-    right: -2vw;
-    top: 40vh;
-  }
-  
-  .conDhcp .square3 {
-    right: 0;
-    top: 50vh;
-  }
-  
-  .conDhcp .dir {
-    width: 80vw;
-    height: 69vh;
-    background-color: #fff;
-    border-radius: 1.5vw;
-    position: absolute;
-    top: 5.9vh;
-    z-index: 2;
-    overflow: hidden;
-    padding: 2vw;
-  }
-  
-=======
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,4 +163,3 @@
   height: 66vh;
   width: 40vw;
 }
->>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
