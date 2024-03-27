@@ -1,10 +1,50 @@
-.acl-access {
+.acl-directive .select {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh;
+  padding: 0 2vw;
+}
+.acl-directive label {
+  display: inline;
+  font-size: 1vw;
+}
+.acl-directive a {
+  display: block;
+  text-decoration: none;
+  height: 24px;
+  color: #f00;
+  font-weight: bold;
+  font-size: 2vh;
+  cursor: pointer;
+}
+.acl-directive select {
+  background: none;
+  height: 5vh;
+  width: 20vw;
+  border-radius: 60px;
+  padding: 0 1vw;
+  margin-left: 3vw;
+  border: 1px solid #000;
+}
+.acl-directive option {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1vw;
+  padding: 4vh;
+  border-radius: 10px;
+  background-color: #000;
+  color: whitesmoke;
+}
+
+.acl-directive {
   width: 100%;
   height: 78vh;
   margin-top: -12vh;
   position: relative;
 }
-.acl-access .acl-access-box {
+.acl-directive .acl-directive-box {
   margin: auto;
   width: 80vw;
   min-width: 500px;
@@ -18,7 +58,7 @@
   padding: 15vh 2.5vw 0 2.5vw;
   height: 74vh;
 }
-.acl-access .acl-access-box::before {
+.acl-directive .acl-directive-box::before {
   content: "";
   position: absolute;
   left: 0;
@@ -28,7 +68,7 @@
   background-color: #fff;
   border-radius: 20px 0px 0px 0px;
 }
-.acl-access .acl-access-box::after {
+.acl-directive .acl-directive-box::after {
   content: "";
   position: absolute;
   left: 20%;
@@ -38,8 +78,8 @@
   background-color: #fff;
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
 }
-.acl-access .acl-access-box .logo {
-  background-image: url("../assets/access.png");
+.acl-directive .acl-directive-box .logo {
+  background-image: url("../assets/directive.svg");
   background-position: center;
   background-size: cover;
   width: 15vw;
@@ -49,33 +89,31 @@
   position: absolute;
   top: -6vh;
 }
-.acl-access .acl-access-box .table {
+.acl-directive .acl-directive-box .table {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-y: auto;
-  margin-top: 10vh;
   height: 50vh;
-  font-size: 1vw;
+  font-size: 0.8vw;
 }
 
-.acl-access .acl-access-box .table .tbody {
+.acl-directive .acl-directive-box .table .tbody {
   overflow-y: auto;
   height: 30vh;
 }
-
-.acl-access .acl-access-box .table .th {
+.acl-directive .acl-directive-box .table .th {
   display: flex;
   width: 100%;
   height: 6vh;
 }
-.acl-access .acl-access-box .table .tr {
+.acl-directive .acl-directive-box .table .tr {
+  height: 6vh;
   margin: 1vh 0;
 }
-.acl-access .acl-access-box .table .tr:last-child {
+.acl-directive .acl-directive-box .table .tr:last-child {
   margin-bottom: 150px;
 }
-.acl-access .acl-access-box .table .th .mac-and-ip {
+.acl-directive .acl-directive-box .table .th .mac-and-ip {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -84,44 +122,42 @@
   background-color: #000;
   clip-path: polygon(0% 0%, 98% 0%, 100% 100%, 0% 100%);
 }
-.acl-access .acl-access-box .table .tr .mac-and-ip {
+.acl-directive .acl-directive-box .table .tr .mac-and-ip {
   background-color: #f00;
 }
-.acl-access .acl-access-box .table .th .mac-and-ip h1 {
+.acl-directive .acl-directive-box .table .th .mac-and-ip h1 {
   color: #fff;
 }
-.acl-access .acl-access-box .table .th .actions {
+.acl-directive .acl-directive-box .table .th .actions {
   background-color: #000;
   padding: 1vh;
   width: 20%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 8% 100%);
 }
-.acl-access .acl-access-box .table .tr .actions {
+.acl-directive .acl-directive-box .table .tr .actions {
   background-color: #f00;
   padding: 1.3vh;
-    color: #fff;
-    font-size: 1.2vw;
+  color: #fff;
+  font-size: 1.2vw;
 }
-.acl-access .acl-access-box .table .th .actions h1 {
+.acl-directive .acl-directive-box .table .th .actions h1 {
   color: #fff;
   text-align: center;
 }
-.acl-access .acl-access-box .table .tr .actions .logo-actions {
+.acl-directive .acl-directive-box .table .tr .actions .logo-actions {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.acl-access .acl-access-box .table .tr .actions .logo-actions .edit {
-    
+.acl-directive .acl-directive-box .table .tr .actions .logo-actions .edit {
   cursor: pointer;
 }
-.acl-access .acl-access-box .table .tr .actions .logo-actions .supp {
+.acl-directive .acl-directive-box .table .tr .actions .logo-actions .supp {
   cursor: pointer;
 }
 
-
-.acl-access .access {
-    font-size: .8vw;
+.acl-directive .access {
+  font-size: 0.8vw;
   height: 70%;
   width: 18%;
   border-radius: 10px;
@@ -129,13 +165,13 @@
   clip-path: polygon(0% 0%, 93% 0%, 100% 100%, 7% 100%);
 }
 
-.acl-access .submit {
+.acl-directive .submit {
   display: flex;
   justify-content: space-around;
   width: 100%;
   padding-bottom: 1vh;
 }
-.acl-access .button {
+.acl-directive .button {
   display: block;
   font-size: 1vw;
   width: 20%;
@@ -146,14 +182,14 @@
   padding: 1vh;
 }
 @media screen and (max-width: 768px) {
-  .acl-access .acl-access-box {
+  .acl-directive .acl-directive-box {
     width: 90vw;
   }
 }
 
 /* Pour les écrans plus petits que 576px */
 @media screen and (max-width: 576px) {
-  .acl-access .acl-access-box {
+  .acl-directive .acl-directive-box {
     width: 95vw;
   }
 }

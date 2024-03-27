@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/proxy.css" />
     <link rel="stylesheet" href="css/stat.css" />
     <link rel="stylesheet" href="css/acl.css" />
+    <link rel="stylesheet" href="css/acl-access.css" />
+    <link rel="stylesheet" href="css/acl-directive.css" />
+    <link rel="stylesheet" href="css/acl-status.css" />
     <link rel="stylesheet" href="css/log.css" />
     <link rel="stylesheet" href="css/dhcp.css" />
   </head>
@@ -194,34 +197,178 @@
                 </div>
               </div>
               <div class="swiper-slide acl">
-                <div class="conAcl">
-                  <div class="dir">
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
+                <section class="acl-access">
+                  <div class="acl-access-box">
+                    <div class="logo"></div>
+                    <div class="table">
+                      <div class="th">
+                        <div class="mac-and-ip">
+                          <h1>Nom</h1>
+                          <h1>Accès</h1>
+                        </div>
+                        <div class="actions">
+                          <h1>Actions</h1>
+                        </div>
+                      </div>
+                      <div class="tbody">
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>access1</h1>
+                            <button class="access">Autoriser</button>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>access1</h1>
+                            <button class="access">Autoriser</button>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>access1</h1>
+                            <button class="access">Autoriser</button>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submit">
+                      <button class="button">Ajouter</button>
+                      <button class="button">Restaurer</button>
+                    </div>
                   </div>
-                  <div class="containerdir"></div>
-                </div>
+                </section>
               </div>
               <div class="swiper-slide acl">
-                <div class="conAcl">
-                  <div class="dir">
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
+                <section class="acl-directive">
+                  <div class="acl-directive-box">
+                    <div class="logo"></div>
+                    <div class="select">
+                      <div>
+                        <label for="type">Type :</label>
+                        <select id="type" name="type">
+                          <option>Ip</option>
+                          <option>Domain_name</option>
+                          <option>Port</option>
+                          <option>Time</option>
+                          <option>HTTP_Method</option>
+                          <option>File</option>
+                          <option>HTTP_Status</option>
+
+                          <option>URL</option>
+                          <option>Mac</option>
+                          <option>Protocol</option>
+                          <option>Username</option>
+                          <option>Peer_name</option>
+                          <option>Server_name</option>
+                          <option>Operative_word</option>
+                          <option>Processing_step</option>
+                          <option>Snmp_community</option>
+                          <option>Max_user_ip</option>
+                          <option>Max_connection</option>
+                          <option>Connection_mark</option>
+                        </select>
+                      </div>
+                      <a href="#">Voir Historique</a>
+                    </div>
+                    <div class="table">
+                      <div class="th">
+                        <div class="mac-and-ip">
+                          <h1>Nom</h1>
+                          <h1>Détails</h1>
+                        </div>
+                        <div class="actions">
+                          <h1>Actions</h1>
+                        </div>
+                      </div>
+                      <div class="tbody">
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>rule1</h1>
+                            <h1>détail1</h1>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>rule2</h1>
+                            <h1>détail2</h1>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="th tr">
+                          <div class="mac-and-ip">
+                            <h1>rule3</h1>
+                            <h1>détail3</h1>
+                          </div>
+                          <div class="actions">
+                            <div class="logo-actions">
+                              <div><i class="fa fa-edit"></i></div>
+                              <div><i class="fa fa-trash"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submit">
+                      <button class="button">Ajouter</button>
+                      <button class="button">Restaurer</button>
+                    </div>
                   </div>
-                  <div class="containerdir"></div>
-                </div>
+                </section>
               </div>
               <div class="swiper-slide acl">
-                <div class="conAcl">
-                  <div class="dir">
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
+                <section class="acl-status">
+                  <div class="acl-status-box">
+                    <div class="logo"></div>
+                    <div class="content">
+                      <div class="th">
+                        <h1>Noms</h1>
+                        <h1>Statut</h1>
+                      </div>
+                      <div class="data">
+                        <p>Noms</p>
+                        <button>Active</button>
+                      </div>
+                      <div class="data">
+                        <p>Noms</p>
+                        <button>Active</button>
+                      </div>
+                      <div class="data">
+                        <p>Noms</p>
+                        <button>Active</button>
+                      </div>
+                    </div>
+                    <span class="red-square"></span>
                   </div>
-                  <div class="containerdir"></div>
-                </div>
+                </section>
               </div>
             </div>
             <section class="container-navigate">
@@ -490,11 +637,13 @@
             <h3>Analyse des logs</h3>
             <section class="principale">
               <div class="box">
-                <div class="clip_bas">
-                  <p>tri : durée</p>
-                  <p></p>
-                  <p>utilisateur : userX</p>
-                  <p>periode : 00/00/0000-00/00/0000</p>
+                <div class="border-clip">
+                  <div class="clip_bas">
+                    <p>tri : durée</p>
+                    <p></p>
+                    <p>utilisateur : userX</p>
+                    <p>periode : 00/00/0000-00/00/0000</p>
+                  </div>
                 </div>
                 <div class="table">
                   <div class="th th1 th3">
