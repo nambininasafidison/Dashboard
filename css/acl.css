@@ -30,17 +30,29 @@
 
 .conAcl .square1 {
   right: -4vw;
+<<<<<<< HEAD
+  top: 30vh;
+=======
   top: 40vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
 }
 
 .conAcl .square2 {
   right: -2vw;
+<<<<<<< HEAD
+  top: 40vh;
+=======
   top: 50vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
 }
 
 .conAcl .square3 {
   right: 0;
+<<<<<<< HEAD
+  top: 50vh;
+=======
   top: 60vh;
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d
 }
 
 .conAcl .dir {
@@ -52,10 +64,9 @@
   top: 5.9vh;
   z-index: 2;
   padding: 2vw;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
+<<<<<<< HEAD
+=======
 
 .conAcl .dir .containerAcl {
   width: 20vw;
@@ -88,3 +99,4 @@
 .conAcl .dir .containerAcl .statusImg{
   background-image: url(../assets/status.svg);
 }
+>>>>>>> 12f7cd9b667e2d2139ad39671b9c387d21781c2d

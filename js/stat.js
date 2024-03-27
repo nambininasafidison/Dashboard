@@ -1,11 +1,12 @@
 const chartTraffic = document.getElementById('chart-traffic');
 
+
 new Chart(chartTraffic, {
     type: 'line',
     data: {
-      labels: ['', '', '', '', '', ''],
+      labels: ['1', '2', '3', '4', '5', '6' , '1', '2', '3', '4', '5', '6'],
       datasets: [{
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 5],
       }]
     },
     options: {
@@ -42,8 +43,8 @@ new Chart(chartTrafficContent, {
 //chart-sitePop
 
 const chartSitePop = document.getElementById('chart-sitePop');
-let dataSitePop = ['chatgpt' , 'google' , 'youtube'];
-let labelSitePop = [100 , 200 , 300];
+let dataSitePop = [];
+let labelSitePop = [];
 let sitePopChart;
 
 function fetchData() {
@@ -53,12 +54,13 @@ function fetchData() {
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
+              let tabSitePop = JSON.parse(xhr.responseText);
               labelSitePop = [];
               dataSitePop = [];
-              // for(let sitePop of tabSitePop){
-              //     labelSitePop.push(sitePop.domain);
-              //     dataSitePop.push(sitePop.number);
-              // }
+              for(let sitePop of tabSitePop){
+                   labelSitePop.push(sitePop.domain);
+                   dataSitePop.push(sitePop.number);
+              }
               console.log(dataSitePop);
               console.log(labelSitePop);
               
@@ -72,7 +74,6 @@ function fetchData() {
                       backgroundColor:"#FFFFFF"
                     }],
                     labels: labelSitePop,
-                    
                   },
                   options: {
                     scales: {

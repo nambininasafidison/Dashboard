@@ -1,31 +1,63 @@
 const bell = document.querySelector('.bell');
+const notifNbr = document.querySelector('.bell span');
 const containerNotif = document.querySelector('.container-notification');
 const allNotif = document.querySelector('.all-notif');
+let tabNotifAll = [];
+
+let totalNotif = 3;
+notifNbr.textContent = `${totalNotif}`;
+
+//get notif presence 
+getDataNotifPresence(); 
+
+//get Notif count if it exist
+getDataNotifAccount();
 
 
-bell.addEventListener('click' , () => {
-    if(containerNotif.style.display == 'none'){
-        containerNotif.style.display = 'block';
-        bell.style.backgroundColor = "#000";
-        bell.style.color = "#fff";
-        fetch('../data/notif.json')
-        .then((response) => {
-            response.text()
-            .then((data) => {
-                displayNotif(JSON.parse(data))
-            })
-        })
-        .catch((err) => console.log("error fetching : " + err))
-    }
-    else{
-        containerNotif.style.display = 'none';
-        bell.style.backgroundColor = "#fff";
-        bell.style.color = "#1E1E1E";        
-        allNotif.innerHTML = "";
-    }
-})
+setInterval(()=>{
+    allNotif.innerHTML = "";
+    getDataNotifPresence();
+    getDataNotifAccount();
+} , 36000);
 
-function createNotif(text , notif){
+
+
+function getDataNotifPresence(){
+    ajaxGetData('GET' , './data/backend_test/presence.php' , (tabPresence) => {
+        displayNotifPresence(tabPresence[0]);
+    }) 
+}
+
+
+function getDataNotifAccount(){
+    ajaxGetData('GET' , './data/backend_test/account.php' , (tabAccount) => {
+        if(tabAccount){
+            for(let account of tabAccount){
+                    
+                displayNotifAccount(account);
+            }
+        }
+    })
+}
+
+
+function displayNotifAccount(account){
+    const notifText = `${account.name} ${account.firstName} ${account.level} veut créer un compte ${account.type == "ADMIN" ? "en tant qu'ADMINISTRATEUR" : "en tant que DELEGUE"}`;
+    createNotif(notifText , account.date);
+}
+
+function displayNotifPresence(presence){
+    const notifTextPresence = presence.presence.count != 0 ? `Il y avait ${presence.presence.count} ${presence.presence.count == 1 ? "étudiant absent hier." : "étudiants absents hier."}` : `Tous les étudiants étaient présents hier.`;
+    const notifTextPcNonPris = presence.pc_non_pris.count != 0 ? `Il y avait ${presence.pc_non_pris.count} ${presence.pc_non_pris.count == 1 ? "pc non pris hier." : "pc non prises hier."}` : `Tous les pc étaient pris hier.`;
+    const notifTextPcNonRemis = presence.pc_non_remis.count != 0 ? `Il y avait ${presence.pc_non_remis.count} ${presence.pc_non_remis.count == 1 ? "pc non remis hier." : "pc non remis hier."}` : `Tous les pc étaient remis hier.`;
+
+    createNotif(notifTextPresence , '');
+    createNotif(notifTextPcNonPris , '');
+    createNotif(notifTextPcNonRemis , '');
+}
+
+
+function createNotif(text , date){
     const notifElement = document.createElement('div');
     notifElement.classList.add('notif');
     
@@ -38,52 +70,46 @@ function createNotif(text , notif){
 
     const notifDate = document.createElement('p');
     notifDate.classList.add('date');
-    notifDate.textContent = notif.date;
-
-    const notifDelete = document.createElement('span');
-    notifDelete.style.cursor = "pointer";
-    notifDelete.textContent = "X";
-
-    notifDelete.addEventListener('click' , () => {
-        notifElement.remove();    
-    })
+    notifDate.textContent = date;
 
     notifElement.append(notifDeco);
     notifElement.append(notifContent);
     notifElement.append(notifDate);
-    notifElement.append(notifDelete);
     
     allNotif.append(notifElement);
 }
 
-function displayNotifPc(notif){
-    if(notif.event === "nottaken" && notif.isLate === true){
-        const notifText = `L'étudiant ${notif.info.name} ${notif.info.firstName}  ${notif.info.level} n'a pas encore pris sa machine (en retard)`;
-        createNotif(notifText , notif);
+
+
+bell.addEventListener('click' , () => {
+    if(containerNotif.style.display == 'none'){
+        containerNotif.style.display = 'block';
+        bell.style.backgroundColor = "#000";
+        bell.style.color = "#fff";  
     }
-    if(notif.event === "nottaken" && notif.isLate === false && notif.typeNotLate === "nottaken"){
-        const notifText = `L'étudiant ${notif.info.name} ${notif.info.firstName}  ${notif.info.level} n'a pas pris sa machine aujourd'hui`;
-        createNotif(notifText , notif);
+    else{
+        containerNotif.style.display = 'none';
+        bell.style.backgroundColor = "#fff";
+        bell.style.color = "#1E1E1E";        
     }
-    
+})
+
+function ajaxGetData(requestType , backFileToRequest , getResponse){
+    let xhr = new XMLHttpRequest();
+        xhr.open(requestType, backFileToRequest, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    getResponse(JSON.parse(xhr.responseText));
+                }
+                else {
+                    console.error('Erreur lors de la récupération des données:', xhr.status);
+                }
+            }
+        };
+        xhr.send();
 }
-
-function displayNotifAccount(notif){
-    if(notif.event === "create"){
-        const notifText = `${notif.info.name} ${notif.info.firstName} ${notif.info.level} vous a demandé la permission de créer son compte en tant que ${notif.accountType}`;
-        createNotif(notifText , notif);
-    }
-}
-
-
-
-function displayNotif(tabNotif){
-    tabNotif = tabNotif.reverse();
-    for(let notif of tabNotif){ 
-        notif.type === "pc" ? displayNotifPc(notif) : displayNotifAccount(notif);
-    }
-}
-
 
 
 
