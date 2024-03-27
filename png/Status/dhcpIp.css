@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: p;
+    font-size: 3vh;
+}
+body{
+    background-color: #190306;
+}
+.dhcp-ip{
+    width: 100%;
+    height: auto;
+    padding: 100px 0px;
+    margin: auto;
+}
+.dhcp-ip .dhcp-ip-box{
+    margin: auto;
+    width: 80vw;
+    height: 70vw;
+    min-width: 500px;
+    max-width: 800px;
+    max-height: 700px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.dhcp-ip .dhcp-ip-box::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 20%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 20px 0px 0px 0px;
+}
+.dhcp-ip .dhcp-ip-box::after{
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: -50px;
+    width: 7.5%;
+    height: 50px;
+    background-color: #fff;
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+.dhcp-ip .dhcp-ip-box .logo{
+    background-image: url('../assets/Capture_d_écran_du_2024-03-16_12-12-26-removebg-preview\ 1.png');
+    background-position: center;
+    background-size: cover;
+    width: 15vw;
+    height: 15vw;
+    min-width: 100px;
+    min-height: 100px;
+}
+.icon{
+    position: absolute;
+    top: -10vw;
+    width: auto;
+    height: 22vw;
+}
+.red-square{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('../assets/triple-red-right.png');
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 200px;
+}
+
+button{
+    display: block;
+    font-size: 62%;
+    width: 15%;
+    color: beige;
+    border-radius: 15px;
+    background-color: rgb(4, 34, 54);
+    border: none;
+    font-family:'Courier';
+    padding: 2% 2%;
+}
+
+.content{
+    width: 80%;
+    height: 64%;
+    margin: auto;
+    margin-top: 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.th, .data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5vw 0px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .dhcp-ip .dhcp-ip-box {
+        width: 90vw;
+    }
+}
+/* Pour les écrans plus petits que 576px */
+@media screen and (max-width: 576px) {
+    .dhcp-ip .dhcp-ip-box {
+        width: 95vw;
+    }
+}

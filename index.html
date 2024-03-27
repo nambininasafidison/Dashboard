@@ -213,6 +213,16 @@
                   <div class="containerdir"></div>
                 </div>
               </div>
+              <div class="swiper-slide acl">
+                <div class="conAcl">
+                  <div class="dir">
+                    <div class="square square1"></div>
+                    <div class="square square2"></div>
+                    <div class="square square3"></div>
+                  </div>
+                  <div class="containerdir"></div>
+                </div>
+              </div>
             </div>
             <section class="container-navigate">
               <button class="btn swiper-button-up">
@@ -250,18 +260,18 @@
                       </div>
                       <button class="suivant">suivant</button>
                     </div>
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
                   </div>
+                  <div class="square square1"></div>
+                  <div class="square square2"></div>
+                  <div class="square square3"></div>
                   <div class="containerdir"></div>
                 </div>
               </div>
               <div class="swiper-slide dhcp">
-                <div class="conDhcp">
+                <div class="conDhcp dhcp1">
                   <div class="dir">
-                    <div class="containerDchp">
-                      <div class="dhcpImg dhcpImg2"></div>
+                    <div class="containerDhcp">
+                      <div class="dhcpImg"></div>
                       <h1>Plage d'IP</h1>
                     </div>
                     <div class="containerInput">
@@ -284,6 +294,10 @@
                       <div class="line">
                         <button>M2</button>
                         <input id="M2" type="text" />
+                      </div>
+                      <div class="line">
+                        <button>Pat</button>
+                        <input id="pat" type="text" />
                       </div>
                     </div>
 
@@ -449,42 +463,6 @@
             </section>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="swiper-container-vertical">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide dhcp">
-                <div class="conDhcp">
-                  <div class="dir">
-                    <h1>test</h1>
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
-                  </div>
-                  <div class="containerdir"></div>
-                </div>
-              </div>
-              <div class="swiper-slide dhcp">
-                <div class="conDhcp">
-                  <div class="dir">
-                    <div class="square square1"></div>
-                    <div class="square square2"></div>
-                    <div class="square square3"></div>
-                  </div>
-                  <div class="containerdir"></div>
-                </div>
-              </div>
-            </div>
-            <section class="container-navigate">
-              <button class="btn swiper-button-up">
-                <i class="fa fa-arrow-up"></i>
-              </button>
-              <hr />
-              <button class="btn swiper-button-down">
-                <i class="fa fa-arrow-down"></i>
-              </button>
-            </section>
-          </div>
-        </div>
         <div class="swiper-slide logStat">
           <div class="conLogStat">
             <div class="dir">
@@ -509,12 +487,67 @@
         </div>
         <div class="swiper-slide log">
           <div class="conLog">
-            <div class="dir">
-              <div class="square square1"></div>
-              <div class="square square2"></div>
-              <div class="square square3"></div>
-            </div>
-            <div class="containerdir"></div>
+            <h3>Analyse des logs</h3>
+            <section class="principale">
+              <div class="box">
+                <div class="clip_bas">
+                  <p>tri : durée</p>
+                  <p></p>
+                  <p>utilisateur : userX</p>
+                  <p>periode : 00/00/0000-00/00/0000</p>
+                </div>
+                <div class="table">
+                  <div class="th th1 th3">
+                    <div class="contenu">
+                      <h1>sites accédés</h1>
+                      <h1>acces</h1>
+                      <h1>octets</h1>
+                      <h1>durée</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th0">
+                    <div class="contenu">
+                      <h1>www.linkedin.com</h1>
+                      <h1>56</h1>
+                      <h1>100.10M</h1>
+                      <h1>00:02:27</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th1">
+                    <div class="contenu">
+                      <h1>www.youtube.com</h1>
+                      <h1>29</h1>
+                      <h1>300.85M</h1>
+                      <h1>00:01:05</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th0">
+                    <div class="contenu">
+                      <h1>www.discord.com</h1>
+                      <h1>18</h1>
+                      <h1>200.00M</h1>
+                      <h1>00:00:50</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th1">
+                    <div class="contenu">
+                      <h1>www.facebook.com</h1>
+                      <h1>10</h1>
+                      <h1>50.56M</h1>
+                      <h1>00:00:42</h1>
+                    </div>
+                  </div>
+                  <div class="th tr th0">
+                    <div class="contenu">
+                      <h1>www.tinder.com</h1>
+                      <h1>40</h1>
+                      <h1>68.23M</h1>
+                      <h1>00:00:40</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

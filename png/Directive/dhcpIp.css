@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: p;
+    font-size: 3vh;
+}
+body{
+    background-color: #190306;
+}
+.select{
+    width: 100%;
+    height: 15vh;
+    padding: 5vw;
+    padding-left: 2vw;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label{
+    display: inline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+
+    display: block;
+    text-decoration: none;
+    height: 24px;
+    color: #f00;
+    font-weight: bold;
+    font-size: 2vh;
+}
+select{
+    background-color: none;
+    height: 8vh;
+    width: 30vw;
+    border-radius: 60px;
+    padding-left: 3vw;
+    border-width: 3px;
+}
+option{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    padding: 4vh;
+    border-radius: 10px;
+    background-color: #000;
+    color: whitesmoke;
+}
+
+
+
+.dhcp-ip{
+    width: 100%;
+    height: auto;
+    padding: 100px 0px;
+}
+.dhcp-ip .dhcp-ip-box{
+    margin: auto;
+    width: 80vw;
+    min-width: 500px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.dhcp-ip .dhcp-ip-box::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 20%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 20px 0px 0px 0px;
+}
+.dhcp-ip .dhcp-ip-box::after{
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: -50px;
+    width: 7.5%;
+    height: 50px;
+    background-color: #fff;
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+.dhcp-ip .dhcp-ip-box .logo{
+    background-image: url('../assets/Capture_d_écran_du_2024-03-16_12-12-26-removebg-preview\ 1.png');
+    background-position: center;
+    background-size: cover;
+    width: 15vw;
+    height: 15vw;
+    min-width: 100px;
+    min-height: 100px;
+}
+.dhcp-ip .dhcp-ip-box .table{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 20px 30px; */
+    width: 100%;
+}
+.dhcp-ip .dhcp-ip-box .table .th{
+    display: flex;
+    width: 100%;
+    margin: 5vw 0px;
+}
+.dhcp-ip .dhcp-ip-box .table .tr{
+    margin: 3vh 0px;
+}
+.dhcp-ip .dhcp-ip-box .table .tr:last-child{
+    margin-bottom: 150px;
+}
+.dhcp-ip .dhcp-ip-box .table .th .mac-and-ip{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    padding: 6px 3px;
+    background-color: #000;
+    clip-path: polygon(0% 0%, 98% 0%, 100% 100%, 0% 100%);
+}
+.dhcp-ip .dhcp-ip-box .table .tr .mac-and-ip{
+    background-color: #f00;
+}
+.dhcp-ip .dhcp-ip-box .table .th .mac-and-ip h1{
+    color: #fff;
+}
+.dhcp-ip .dhcp-ip-box .table .th .actions{
+    background-color: #000;
+    width: 20%;
+    padding: 10px 30px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 8% 100%);
+}
+.dhcp-ip .dhcp-ip-box .table .tr .actions{
+    height: 7vh;
+    background-color: #f00;
+}
+.dhcp-ip .dhcp-ip-box .table .th .actions h1{
+    color: #fff;
+    text-align: center;
+}
+.dhcp-ip .dhcp-ip-box .table .tr .actions .logo-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.dhcp-ip .dhcp-ip-box .table .tr .actions .logo-actions .edit{
+    background-image: url('../assets/Group\ 109.png');
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.dhcp-ip .dhcp-ip-box .table .tr .actions .logo-actions .supp{
+    background-image: url('../assets/icons8-supprimer\ 1.png');
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.red-square{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('../assets/triple-red-right.png');
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 200px;
+}
+.icon{
+    position: absolute;
+    top: -5vw;
+    width: auto;
+    height: 22vw;
+}
+.access{
+    font-size: 62%;
+    height: 70%;
+    width: 18%;
+    border-radius: 10px;
+    border: none;
+    font-family:'Courier';
+    padding: 1vh 2%;
+    clip-path: polygon(0% 0%, 93% 0%, 100% 100%, 7% 100%);
+}
+.submit{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 7vh;
+    padding-top: 5vh;
+}
+.button{
+    display: block;
+    font-size: 62%;
+    width: 20%;
+    color: beige;
+    border-radius: 15px;
+    background-color: rgb(4, 34, 54);
+    border: none;
+    font-family:'Courier';
+    padding: 2% 2%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .dhcp-ip .dhcp-ip-box {
+        width: 90vw;
+    }
+}
+/* Pour les écrans plus petits que 576px */
+@media screen and (max-width: 576px) {
+    .dhcp-ip .dhcp-ip-box {
+        width: 95vw;
+    }
+}

@@ -8,6 +8,7 @@
 }
 .container-navigate hr {
   width: 30vw;
+  margin-left: -6vw;
   background-color: #fff;
 }
 
@@ -18,7 +19,8 @@
   background: none;
   color: #fff;
   border: 1px solid #fff;
-  margin: .5vh;
+  margin: .5vh 0;
+  margin-left: -6vw;
   font-size: .8vw;
 }
 

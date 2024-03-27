@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .conDhcp {
@@ -11,10 +12,11 @@
 }
 
 .conDhcp .containerdir {
-  width: 80vw;
+  width: 60vw;
   height: 75vh;
   background-color: #fff;
   border-radius: 1.5vw;
+  overflow: hidden;
   clip-path: polygon(0 0, 15% 0, 20% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
 }
 
@@ -44,7 +46,7 @@
 }
 
 .conDhcp .dir {
-  width: 80vw;
+  width: 60vw;
   height: 69vh;
   background-color: #fff;
   border-radius: 1.5vw;
@@ -77,20 +79,87 @@
   height: 11vw;
 }
 
-.conDhcp .containerDhcp .dhcpImg2 {
-    background-image: url(../assets/Dchp.svg);
-    background-color: #f00;
-    background-position: center;
-    background-size: cover;
-    width: 11vw;
-    height: 11vw;
-  }
-
 .conDhcp .containerInput {
-    width: 20vw;
-    height: 30vh;
-    border: 1px solid #000;
-    margin-top: 5vh;
-    border-radius: 1vw;
-    padding: 2vh;
+  width: 25vw;
+  height: 40vh;
+  border: 1px solid #000;
+  margin-top: 15vh;
+  border-radius: 1vw;
+  padding: 2vh;
+}
+
+.conDhcp .containerInput .input {
+  position: relative;
+  left: 2.5vw;
+  height: 10vh;
+  left: 3vw;
+  top: 2vh;
+}
+
+.conDhcp .containerInput .input input {
+  width: 17vw;
+  height: 5.5vh;
+  border-radius: 4vw;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25vh 1vw;
+  font-size: 0.8vw;
+}
+
+.conDhcp .containerInput .input label {
+  position: absolute;
+  font-size: 1vw;
+  top: -1.6vh;
+  left: 1.5vw;
+  background-color: #fff;
+  padding: 0 0.3vw;
+}
+
+.conDhcp .containerInput button {
+  color: #f00;
+  font-size: 1vw;
+  border: none;
+  background: none;
+  margin-left: 18vw;
+  font-weight: bolder;
+}
+
+.conDhcp .containerInput .line {
+  display: flex;
+  justify-content: center;
+  margin: 2vh 0;
+  height: 4vh;
+  width: 22.5vw;
+}
+
+.conDhcp .containerInput .line button {
+  margin: 0 2vw;
+  width: 2vw;
+  box-shadow: 0 1px #f00;
+  border-radius: 0.7vw;
+}
+
+.conDhcp .containerInput .line input {
+  border-radius: 1vw;
+  border: 1px solid #000;
+}
+
+.configurer {
+  background: none;
+  border-radius: 1.5vw;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.5vw;
+  padding: 0.5vh 1vw;
+  margin-top: 2vh;
+}
+
+.dhcp1 .dir {
+  height: 60vh;
+  width: 40vw;
+}
+
+.dhcp1 .containerdir {
+  height: 66vh;
+  width: 40vw;
 }
